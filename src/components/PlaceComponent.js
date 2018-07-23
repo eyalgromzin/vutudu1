@@ -39,7 +39,7 @@ class PlaceComponent extends Component {
 
 function mapStateToProps(state) {
     return {
-      place: state.place
+      place: state.searchReducer.place
     };
   }
 
