@@ -3,21 +3,24 @@ import {SET_PLACE} from '../redux/Types'
 import { connect } from 'react-redux';
 
 class PlaceComponent extends Component {
-constructor(){
-  super();
+  constructor(){
+    super();
 
-  this.state = {
-    place: ''
+    this.state = {
+      place: ''
+    }
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSetPlaceClick = this.handleSetPlaceClick.bind(this);
   }
-}
 
-      handleSetPlaceClick = () => {
-        this.props.dispatch({ type: SET_PLACE, payload: this.state.place });
-      }
+  handleSetPlaceClick = () => {
+    this.props.dispatch({ type: SET_PLACE, payload: this.state.place });
+  }
 
-      handleChange(event) {
-        this.setState({place: event.target.value });
-      }
+  handleChange(event) {
+    this.setState({place: event.target.value});
+  }
 
   render() {
     return (

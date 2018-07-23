@@ -8,12 +8,14 @@ const initialState = {
   function reducer(state = initialState, action) {
     switch(action.type) {
       case 'SET_PLACE':
+        const s = 'asd';
         return {
-          place: state.payload
+          place: action.payload
         };
       default:
         return state;
     }
   }
 
-  export default  combineReducers({ searchCriterias: reducer });;
+  export default reducer;
+  // export default  combineReducers({ searchCriterias: reducer });;
