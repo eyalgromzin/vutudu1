@@ -10,7 +10,7 @@ const initialState = {
       case 'SET_PLACE':
         const s = 'asd';
         return {
-          place: action.payload
+          place: action.payload 
         };
       default:
         return state;
