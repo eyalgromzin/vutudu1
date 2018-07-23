@@ -1,8 +1,9 @@
 import { createStore } from 'redux';
-import SearchReducer from './SearchReducer'
+// import SearchReducer from './SearchReducer'
+import rootReducer from './RootReducer'
 
 const store = createStore(
-    SearchReducer,
+    rootReducer,
     //to support the chrome extension
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 

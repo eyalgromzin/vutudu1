@@ -20,4 +20,4 @@ function reducer(state = initialState, action) {
   }
 }
 
-export default  combineReducers({ count: reducer });;
+export default reducer;

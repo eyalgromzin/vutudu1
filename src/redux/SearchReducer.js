@@ -18,4 +18,3 @@ const initialState = {
   }
 
   export default reducer;
-  // export default  combineReducers({ searchCriterias: reducer });;
