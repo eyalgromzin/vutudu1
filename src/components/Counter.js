@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { DECREMENT,INCREMENT } from './redux/Types';
+import { DECREMENT,INCREMENT } from '../redux/Types';
 
 class Counter extends React.Component {
   increment = () => {

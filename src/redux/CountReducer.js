@@ -1,4 +1,5 @@
 import React from 'react';
+import { combineReducers } from "redux";
 
 const initialState = {
   count: 0
@@ -19,4 +20,4 @@ function reducer(state = initialState, action) {
   }
 }
 
-export default reducer;
+export default  combineReducers({ count: reducer });;
