@@ -9,10 +9,13 @@ export default class IdeaCard extends Component {
             <div id="ideaTitle"> title </div>
             <div id="ideaContent"> idea content </div>
             <div id="nextIdeaButton"> next idea button</div>
-            <Like />
-            
+            <div id="nextIdeaButton"> next idea button</div>
+            <DifficultyChooser />
+            <LikesChooser />
+            <TimeChooser />
+            <AddNewIdeaButton />
         </div>
-      </div>
+    </div>
     )
   }
 }
