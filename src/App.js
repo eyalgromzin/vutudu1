@@ -14,9 +14,7 @@ class App extends Component {
   render() {
     return (
       <Provider store={store}>
-      <div>
-          {/* <Counter/> */}
-          {/* <Place /> */}
+        <div id="mainPage">
           <TopBar />
           <SearchBar />
           <IdeaCard />

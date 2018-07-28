@@ -1,0 +1,9 @@
+.topBarIcon{
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+}
+
+.alignRight{
+    float: right;
+}
