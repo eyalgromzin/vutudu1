@@ -5,10 +5,10 @@ import DifficultyIndicator from './statsButtons/difficultyIndicator/difficultyIn
 import TimeIndicator from './statsButtons/timeIndicator/timeIndicator'
 
 import IdeaPreviousNextButtons from './cardButtons/nextPreviousButtons/nextPreviousButtons'
-import TimeIndicator from './statsButtons/timeIndicator/timeIndicator'
-import TimeIndicator from './statsButtons/timeIndicator/timeIndicator'
-import TimeIndicator from './statsButtons/timeIndicator/timeIndicator'
-import TimeIndicator from './statsButtons/timeIndicator/timeIndicator'
+import CardCountInfo from './cardButtons/cardCountInfo/cardCountInfo'
+import IdeaAttachmentsButton from './cardButtons/ideaAttachmentsButton/ideaAttachmentButton'
+import IdeaAttachmentsDrawer from './cardButtons/ideaAttachmentsDrawer/ideaAttachmentsDrawer'
+import IdeaPlace from './cardButtons/placeButton/placeButton'
 
 
 export default class IdeaCard extends Component {
@@ -19,7 +19,7 @@ export default class IdeaCard extends Component {
             idea card
             <div id="cardButtons">
               <IdeaPreviousNextButtons />
-              <IdeaCountStatus />
+              <CardCountInfo />
               <IdeaAttachmentsButton />
               <IdeaAttachmentsDrawer />
               <IdeaPlace />

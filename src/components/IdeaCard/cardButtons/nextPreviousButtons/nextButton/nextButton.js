@@ -5,6 +5,7 @@ export default class IdeaNextButton extends Component {
   render() {
     return (
       <div>
+        IdeaNextButton
       </div>
     )
   }
