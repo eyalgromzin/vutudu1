@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
-import './searchButton.css'
+import './timePicker.css'
 
-export default class SearchButton extends Component {
+export default class TimePicker extends Component {
   render() {
     return (
       <div>
-        searchButton
+        time picker
       </div>
     )
   }

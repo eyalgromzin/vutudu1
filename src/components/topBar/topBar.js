@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import CreateIdeaButton from './createIdeaButton/createIdeaButton'
 
 export default class TopBar extends Component {
   render() {

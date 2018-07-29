@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
-import './searchButton.css'
+import './timeDownArrow.css'
 
-export default class SearchButton extends Component {
+export default class TimeDownArrow extends Component {
   render() {
     return (
       <div>
-        searchButton
+        time down Arrow
       </div>
     )
   }

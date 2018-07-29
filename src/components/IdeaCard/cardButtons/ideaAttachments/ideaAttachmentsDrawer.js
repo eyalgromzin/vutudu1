@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
-import './searchButton.css'
+import './ideaAttachmentsDrawer.css'
 
-export default class SearchButton extends Component {
+export default class ideaAttachmentsDrawer extends Component {
   render() {
     return (
       <div>
-        searchButton
+        
       </div>
     )
   }

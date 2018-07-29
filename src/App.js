@@ -6,9 +6,9 @@ import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import store from './redux/store'
 import Place from './components/PlaceComponent'
-import TopBar from './components/TopBar/topBarComponent'
-import SearchBar from './components/SearchBar/searchBarComponent'
-import IdeaCard from './components/IdeaCard/ideaCardComponent'
+import TopBar from './components/topBar/topBar'
+import SearchBar from './components/searchBar/searchBar'
+import IdeaCard from './components/ideaCard/ideaCard'
 
 class App extends Component {
   render() {
@@ -18,7 +18,6 @@ class App extends Component {
           <TopBar />
           <SearchBar />
           <IdeaCard />
-          <CreateIdeaButton />
         </div>
       </Provider>
     );

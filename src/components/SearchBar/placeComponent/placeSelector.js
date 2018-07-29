@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
-import './searchButton.css'
+import './PlaceSelector.css'
 
-export default class SearchButton extends Component {
+export default class PlaceSelector extends Component {
   render() {
     return (
       <div>
-        searchButton
+        place selector
       </div>
     )
   }
