@@ -1,0 +1,8 @@
+.verticalMiddleAlign{
+    position: relative;
+    transform: translateY(25%);
+}
+
+.displayInlineBlock{
+    display: inline-block;
+}

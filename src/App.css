@@ -30,3 +30,7 @@
 #mainPage{
   background-color: beige;
 }
+
+.mainContent{
+  padding: 0 20%;
+}
