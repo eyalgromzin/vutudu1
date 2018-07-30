@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './NumOfEopleSelector.css'
+import './numOfPeopleSelector.css'
 
 export default class NumOfEopleSelector extends Component {
   render() {

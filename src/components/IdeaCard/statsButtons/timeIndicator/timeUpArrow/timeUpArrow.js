@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import './timeUpButton.css'
+import './timeUpArrow.css'
 
-export default class TimeUpButton extends Component {       
+export default class TimeUpArrow extends Component {       
   render() {
     return (
       <div>

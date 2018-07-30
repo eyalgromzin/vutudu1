@@ -7,7 +7,8 @@ export default class TopBar extends Component {
       <div>
         <div id="TopBar">
             <div id="topBarLogo">
-            <img src="/src/images/logo.png" />
+            {/* <img src={ require('./images/image1.jpg') } /> */}
+            <img src={require("images/logo.png")} class="topBarLogo" />
             VUTUDU
             </div>
             <CreateIdeaButton />

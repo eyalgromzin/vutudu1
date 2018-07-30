@@ -5,7 +5,6 @@ import './App.css';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import store from './redux/store'
-import Place from './components/PlaceComponent'
 import TopBar from './components/topBar/topBar'
 import SearchBar from './components/searchBar/searchBar'
 import IdeaCard from './components/ideaCard/ideaCard'

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import 'nextButton.css'
+import './nextButton.css'
 
 export default class IdeaNextButton extends Component {
   render() {

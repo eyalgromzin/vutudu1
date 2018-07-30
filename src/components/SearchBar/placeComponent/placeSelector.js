@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './PlaceSelector.css'
+import './placeSelector.css'
 
 export default class PlaceSelector extends Component {
   render() {
