@@ -7,7 +7,7 @@ import { Provider } from 'react-redux';
 import store from './redux/store'
 import TopBar from './components/topBar/topBar'
 import SearchBar from './components/searchBar/searchBar'
-import IdeaCard from './components/ideaCard/ideaCard'
+import IdeaCard from './components/IdeaCard/ideaCard'
 
 class App extends Component {
   render() {
