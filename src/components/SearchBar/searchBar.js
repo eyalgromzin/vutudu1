@@ -8,8 +8,7 @@ import SearchButton from './searchButton/searchButton'
 export default class SearchBar extends Component {
   render() {
     return (
-      <div>
-        search bar
+      <div id="searchBar">
         <PlaceSelector />
         <TimePicker />
         <NumOfPeopleSelector />
