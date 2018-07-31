@@ -1,0 +1,18 @@
+.ideaTopButton{
+    height: 20px;
+    width: 20px;
+}
+
+#ideaTitle{
+    height: 25px;
+    background-color: bisque;
+}
+
+#ideaContent{
+    background-color: thistle;
+    height:50%;
+}
+
+#ideaCard{
+
+}
