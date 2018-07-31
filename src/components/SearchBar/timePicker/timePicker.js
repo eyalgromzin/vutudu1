@@ -3,13 +3,13 @@ import './timePicker.css'
 import '../searchBar.css';
 
 export default class TimePicker extends Component {
-    constructor(){
-      super();
-    }
+  constructor(){
+    super();
+  }
 
-    change(){
-         
-    }
+  change(){
+        
+  }
 
   render() {
     return (
