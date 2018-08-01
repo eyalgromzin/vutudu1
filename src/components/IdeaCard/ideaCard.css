@@ -8,13 +8,22 @@
     background-color: bisque;
 }
 
-#ideaContent{
+#ideaMainContent{
     background-color: thistle;
     height:300px;
 }
 
-#ideaCard{
+#ideaContent{
+    width:95%;
+    display: inline-block;
 
+}
+
+#ideaDrawer{
+    width:5%;
+    height: 100%;
+    display: inline-block;
+    background-color: grey;
 }
 
 .bottomButton{

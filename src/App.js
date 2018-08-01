@@ -14,8 +14,9 @@ class App extends Component {
     return (
       <Provider store={store}>
         <div id="mainPage">
+          
+          <TopBar />
           <div class="mainContent">
-            <TopBar />
             <SearchBar />
             <IdeaCard /> 
           </div>

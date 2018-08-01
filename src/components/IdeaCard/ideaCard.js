@@ -26,7 +26,10 @@ export default class IdeaCard extends Component {
               <IdeaPlace />
               <IdeaAttachmentsDrawer />
             </div>
-            <div id="ideaContent"> idea content </div>
+            <div id="ideaMainContent">
+              <div id="ideaContent"> content </div>
+              <div id="ideaDrawer"> drawer </div>
+            </div>
           </div>
           <div id="statusButtons">
             <DifficultyIndicator />

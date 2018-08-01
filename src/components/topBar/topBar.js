@@ -7,7 +7,7 @@ export default class TopBar extends Component {
   render() {
     return (
       <div>
-        <div id="TopBar">
+        <div id="TopBar mainContent">
             <img src={require("images/logo.png")} class="topBarLogo verticalMiddleAlign" />
             VUTUDU2
             <CreateIdeaButton />
