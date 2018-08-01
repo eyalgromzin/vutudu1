@@ -4,7 +4,7 @@ import './cardCountInfo.css'
 export default class CardCountInfo extends Component {
   render() {
     return (
-      <div>
+      <div id="cardCountInfo">
         3/13
       </div>
     )

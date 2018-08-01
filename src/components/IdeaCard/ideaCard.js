@@ -14,28 +14,26 @@ import IdeaPlace from './cardButtons/placeButton/placeButton'
 export default class IdeaCard extends Component {
   render() {
     return (
-      <div>
-        <div id="ideaCard">
-            idea card
-            <div id="cardButtons">
-              <IdeaPreviousNextButtons />
-              <CardCountInfo />
+      <div id="ideaCard">
+          <div id="topCardButtons">
+            <IdeaPreviousNextButtons />
+            <CardCountInfo />
+          </div>
+          
+          <div id="ideaCard"> 
+            <div id="ideaTitle"> title
               <IdeaAttachmentsButton />
-              <IdeaAttachmentsDrawer />
               <IdeaPlace />
+              <IdeaAttachmentsDrawer />
             </div>
-            <div id="ideaCard"> 
-              <div id="ideaTitle"> title </div>
-              <div id="ideaContent"> idea content </div>
-            </div>
-
-            <div id="statusButtons">
-              <DifficultyIndicator />
-              <LikeDislike />
-              <TimeIndicator />
-            </div>
-        </div>
-    </div>
+            <div id="ideaContent"> idea content </div>
+          </div>
+          <div id="statusButtons">
+            <DifficultyIndicator />
+            <LikeDislike />
+            <TimeIndicator />
+          </div>
+      </div>
     )
   }
 }

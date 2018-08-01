@@ -1,12 +1,17 @@
 import React, { Component } from 'react'
 import './ideaAttachmentButton.css'
+import '../cardButtons.css'
 
 export default class IdeaAttachmentButton extends Component {
+  handleAttachmentsClick(){
+
+  }
+
   render() {
     return (
-      <div>
-        ideaAttachmentButton
-      </div>
+      <React.Fragment>
+        <img src={require("images/attachmentIcon.png")} id="attachmentsButton" class="subjectButton" onClick={this.handleAttachmentsClick}/>
+      </React.Fragment>
     )
   }
 }

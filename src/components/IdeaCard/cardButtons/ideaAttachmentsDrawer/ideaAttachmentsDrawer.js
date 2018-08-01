@@ -4,9 +4,9 @@ import './ideaAttachmentsDrawer.css'
 export default class IdeaAttachmentsDrawer extends Component {
   render() {
     return (
-      <div>
+      <React.Fragment>
         ideaAttachmentsDrawer
-      </div>
+      </React.Fragment>
     )
   }
 }

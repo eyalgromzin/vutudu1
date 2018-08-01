@@ -1,15 +1,14 @@
 import React, { Component } from 'react'
 import './difficultyIndicator.css'
-import IncreaseHardArrow from './increaseHardArrow/increaseHardArrow'
-import DecreaseHardArrow from './decreaseHardArrow/decreaseHardArrow'
+import '../../ideaCard.css'
 
 export default class DiffictultyIndicator extends Component {
   render() {
     return (
-      <div>
-        idea difficulty buttons
-        <IncreaseHardArrow />
-        <DecreaseHardArrow />
+      <div class="bottomIndicator">
+        <img src={require("images/difficulty.png")} id="difficultyImage" class="bottomButton" onClick={this.handleAttachmentsClick}/>
+        <img src={require("images/upArrow.png")} id="increaseDifficultu" class="bottomButton" onClick={this.handleAttachmentsClick}/>
+        <img src={require("images/downArrow.png")} id="decreaseDifficulty" class="bottomButton" onClick={this.handleAttachmentsClick}/>
       </div>
     )
   }

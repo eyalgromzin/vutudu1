@@ -10,9 +10,19 @@
 
 #ideaContent{
     background-color: thistle;
-    height:50%;
+    height:300px;
 }
 
 #ideaCard{
 
+}
+
+.bottomButton{
+    height:20px;
+    width:20px;
+}
+
+.bottomIndicator{
+    margin-right: 10px;
+    display: inline-block;
 }
