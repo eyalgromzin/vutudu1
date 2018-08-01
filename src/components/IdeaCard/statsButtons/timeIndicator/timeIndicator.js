@@ -7,6 +7,7 @@ export default class TimeIndicator extends Component {
         <img src={require("images/time.png")} id="timeImage" class="bottomButton" onClick={this.handleAttachmentsClick} alt="time image"/>
         <img src={require("images/upArrow.png")} id="incrementTime" class="bottomButton" onClick={this.handleAttachmentsClick}/>
         <img src={require("images/downArrow.png")} id="decreaseTime" class="bottomButton" onClick={this.handleAttachmentsClick}/>
+        5-20
       </div>
     )
   }
