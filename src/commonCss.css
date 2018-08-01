@@ -6,3 +6,7 @@
 .displayInlineBlock{
     display: inline-block;
 }
+
+.mainContent{
+  padding: 0 20%;
+}

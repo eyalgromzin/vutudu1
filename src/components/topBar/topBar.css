@@ -14,7 +14,7 @@
     display: inline-block;
 }
 
-#TopBar{
+.TopBar{
     height: 30px;
     background-color: white;
     color: black;

@@ -6,13 +6,13 @@ import 'commonCss.css'
 export default class TopBar extends Component {
   render() {
     return (
-      <div>
-        <div id="TopBar mainContent">
-            <img src={require("images/logo.png")} class="topBarLogo verticalMiddleAlign" />
-            VUTUDU2
-            <CreateIdeaButton />
-        </div>  
-      </div>
+      <div id="TopBar mainContent">
+        <div class="mainContent"> 
+          <img src={require("images/logo.png")} class="topBarLogo verticalMiddleAlign" />
+          VUTUDU2
+          <CreateIdeaButton />
+        </div>
+      </div>  
     )
   }
 }
