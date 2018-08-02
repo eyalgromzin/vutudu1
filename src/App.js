@@ -9,16 +9,32 @@ import TopBar from './components/topBar/topBar'
 import SearchBar from './components/searchBar/searchBar'
 import IdeaCard from './components/ideaCard/ideaCard'
 
+const showIdeaPage = "SHOW_IDEA";
+const createIdeaPage = "CREATE_IDEA";
+
 class App extends Component {
+  constructor(){
+    this.state = {
+      currentPage = createIdeaPage
+    }
+  }
+
   render() {
     return (
       <Provider store={store}>
         <div id="mainPage">
-          
           <TopBar />
           <div class="mainContent">
-            <SearchBar />
-            <IdeaCard /> 
+            {this.state.currentPage == showIdeaPage ? 
+              <React.Fragment>
+                <SearchBar />
+                <IdeaCard />
+              </React.Fragment> :
+              <React.Fragment>
+                <AddIdeaBar />
+                <AddIdeaCard />
+              </React.Fragment>
+            }
           </div>
         </div>
       </Provider>
