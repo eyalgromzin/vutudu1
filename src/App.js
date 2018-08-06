@@ -8,14 +8,19 @@ import store from './redux/store'
 import TopBar from './components/topBar/topBar'
 import SearchBar from './components/searchBar/searchBar'
 import IdeaCard from './components/ideaCard/ideaCard'
+import CreateIdeaBar from './components/searchBar/create/createIdeaBar/createIdeaBar'
+import CreateIdeaCard from './components/ideaCard/createIdeaCard'
 
-const showIdeaPage = "SHOW_IDEA";
-const createIdeaPage = "CREATE_IDEA";
+export const showIdeaPage = 'SHOW_IDEA';
+export const createIdeaPage = 'CREATE_IDEA';
 
 class App extends Component {
   constructor(){
+    super();
+
+    //TODO: get current page from redux
     this.state = {
-      currentPage = createIdeaPage
+      currentPage: createIdeaPage
     }
   }
 
@@ -29,10 +34,11 @@ class App extends Component {
               <React.Fragment>
                 <SearchBar />
                 <IdeaCard />
-              </React.Fragment> :
+              </React.Fragment> 
+              :
               <React.Fragment>
-                <AddIdeaBar />
-                <AddIdeaCard />
+                <CreateIdeaBar />
+                <CreateIdeaCard />
               </React.Fragment>
             }
           </div>

@@ -1,18 +1,18 @@
 import React, { Component } from 'react'
 
-import PlaceCreator from './placeComponent/placeSelector'
-import NumOfPeopleCreator from './numOfPeopleSelector/numOfPeopleSelector'
-import TimeCreator from './timePicker/timePicker'
-import MoreCreator from './searchButton/searchButton'
+import PlaceSelector from '../../placeSelector/placeSelector'
+import NumOfPeopleCreator from '../numOfPeopleCreator/numOfPeopleCreator'
+import TimePicker from '../../timePicker/timePicker'
+import MoreChooser from '../../moreChooser/moreChooser'
 
-export default class SearchBar extends Component {
+export default class CreateIdeaBar extends Component {
   render() {
     return (
       <div id="searchBar">
-        <PlaceCreator />
-        <TimeCreator />
+        <PlaceSelector />
+        <TimePicker />
         <NumOfPeopleCreator />
-        <MoreCreator />
+        <MoreChooser />
       </div>
     )
   }

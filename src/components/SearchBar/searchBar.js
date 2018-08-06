@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import PlaceSelector from './placeComponent/placeSelector'
+import PlaceSelector from './placeSelector/placeSelector'
 import NumOfPeopleSelector from './numOfPeopleSelector/numOfPeopleSelector'
 import TimePicker from './timePicker/timePicker'
 import MoreChooser from './moreChooser/moreChooser'
