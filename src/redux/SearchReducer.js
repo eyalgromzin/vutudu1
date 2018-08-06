@@ -8,7 +8,6 @@ const initialState = {
   function reducer(state = initialState, action) {
     switch(action.type) {
       case 'SET_PLACE':
-        const s = 'asd';
         return {
           place: action.payload 
         };

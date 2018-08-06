@@ -2,11 +2,16 @@ import React, { Component } from 'react'
 import './createIdeaButton.css'
 import '../topBar.css'
 import 'commonCss.css'
+import CHANGE_PAGE_TO_CREATE_IDEA from 'redux/CommonReducer'
 
 export default class CreateIdeaButton extends Component {
-handleNewIdeaClick(){
-  //TODO: save in redux the main state of the app
-}
+  handleNewIdeaClick(){
+    this.changePageToCreateIdea();
+  }
+
+  changePageToCreateIdea = () => {
+    this.props.dispatch({ type: CHANGE_PAGE_TO_CREATE_IDEA });
+  }
 
   render() {
     return (

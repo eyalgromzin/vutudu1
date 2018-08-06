@@ -1,15 +1,6 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-// import Counter from './components/Counter';
-import { createStore } from 'redux';
-import { Provider } from 'react-redux';
-import store from './redux/store'
-import TopBar from './components/topBar/topBar'
-import SearchBar from './components/searchBar/searchBar'
-import IdeaCard from './components/ideaCard/ideaCard'
-import CreateIdeaBar from './components/searchBar/create/createIdeaBar/createIdeaBar'
-import CreateIdeaCard from './components/ideaCard/createIdeaCard'
+
+import Layout from './layout/layout'
 
 export const showIdeaPage = 'SHOW_IDEA';
 export const createIdeaPage = 'CREATE_IDEA';
@@ -20,32 +11,34 @@ class App extends Component {
 
     //TODO: get current page from redux
     this.state = {
-      currentPage: createIdeaPage
+      currentPage: createIdeaPage,
+      place: ''
     }
+
+    // this.props.currentPage = showIdeaPage
+    // this.props.place = "asd"
   }
 
   render() {
     return (
       <Provider store={store}>
-        <div id="mainPage">
-          <TopBar />
-          <div class="mainContent">
-            {this.state.currentPage == showIdeaPage ? 
-              <React.Fragment>
-                <SearchBar />
-                <IdeaCard />
-              </React.Fragment> 
-              :
-              <React.Fragment>
-                <CreateIdeaBar />
-                <CreateIdeaCard />
-              </React.Fragment>
-            }
-          </div>
-        </div>
+        <Layout />
       </Provider>
     );
   }
 }
 
-export default App;
+// function mapStateToProps(state) {
+//   return {
+//     currentPage: state.commonReducer.currentPage
+//   };
+// }
+
+function mapStateToProps(state) {
+  return {
+    place: state.searchReducer.place
+  };
+}
+
+export default connect(mapStateToProps)(App);
+// export default App;

@@ -3,7 +3,6 @@ import './ideaCard.css'
 import LikeDislike from './statsButtons/likesIndicator/likeDislike'
 import DifficultyIndicator from './statsButtons/difficultyIndicator/difficultyIndicator'
 import TimeIndicator from './statsButtons/timeIndicator/timeIndicator'
-
 import IdeaPreviousNextButtons from './cardButtons/nextPreviousButtons/nextPreviousButtons'
 import CardCountInfo from './cardButtons/cardCountInfo/cardCountInfo'
 import IdeaAttachmentsButton from './cardButtons/ideaAttachmentsButton/ideaAttachmentButton'

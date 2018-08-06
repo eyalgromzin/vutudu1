@@ -1,0 +1,17 @@
+#mainPage{
+    background-color: beige;
+  }
+  
+  body{
+    background-color: beige;
+  }
+  
+  .mainContent{
+    padding: 0 20%;
+  }
+  
+  html, body {
+      margin:0;
+      padding:0;
+      height: 100%;
+  }

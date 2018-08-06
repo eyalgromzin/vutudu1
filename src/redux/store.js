@@ -1,5 +1,4 @@
 import { createStore } from 'redux';
-// import SearchReducer from './SearchReducer'
 import rootReducer from './RootReducer'
 
 const store = createStore(
