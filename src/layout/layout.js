@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './layout.css'
-import logo from './logo.svg';
-import './App.css';
+import logo from '../images/logo.svg';
+import './layout.css';
 
 // import Counter from './components/Counter';
 import { createStore } from 'redux';
@@ -15,8 +15,20 @@ import IdeaCard from '../components/ideaCard/ideaCard'
 import CreateIdeaBar from '../components/searchBar/create/createIdeaBar/createIdeaBar'
 import CreateIdeaCard from '../components/ideaCard/createIdeaCard'
 
+export const showIdeaPage = 'SHOW_IDEA';
+export const createIdeaPage = 'CREATE_IDEA';
 
-export default class Layout extends Component {
+class Layout extends Component {
+  constructor(){
+    super();
+
+    //TODO: get current page from redux
+    this.state = {
+      currentPage: createIdeaPage,
+      place: ''
+    }
+  }
+  
   render() {
     return (
       <div>
@@ -41,3 +53,11 @@ export default class Layout extends Component {
     )
   }
 }
+
+function mapStateToProps(state) {
+  return {
+    place: state.searchReducer.place
+  };
+}
+
+export default connect(mapStateToProps)(Layout);
