@@ -35,7 +35,6 @@ class Layout extends Component {
         <div id="mainPage">
           <TopBar />
           <div class="mainContent">
-          place: {this.props.place}
             {this.state.currentPage == showIdeaPage ? 
               <React.Fragment>
                 <SearchBar />
