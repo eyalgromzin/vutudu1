@@ -15,7 +15,7 @@ import IdeaCard from '../components/ideaCard/ideaCard'
 import CreateIdeaBar from '../components/searchBar/create/createIdeaBar/createIdeaBar'
 import CreateIdeaCard from '../components/ideaCard/createIdeaCard'
 
-export const showIdeaPage = 'SHOW_IDEA';
+export const showIdeaPage = 'SHOW_IDEAS';
 export const createIdeaPage = 'CREATE_IDEA';
 
 class Layout extends Component {
@@ -35,7 +35,7 @@ class Layout extends Component {
         <div id="mainPage">
           <TopBar />
           <div class="mainContent">
-            {this.state.currentPage == showIdeaPage ? 
+            {this.props.currentPage == showIdeaPage ? 
               <React.Fragment>
                 <SearchBar />
                 <IdeaCard />
@@ -55,7 +55,7 @@ class Layout extends Component {
 
 function mapStateToProps(state) {
   return {
-    place: state.searchReducer.place
+    currentPage: state.commonReducer.currentPage
   };
 }
 

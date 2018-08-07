@@ -6,6 +6,7 @@ const initialState = {
 };
 
 export const CHANGE_PAGE_TO_CREATE_IDEA = "CHANGE_PAGE_TO_CREATE_IDEA";
+export const CHANGE_PAGE_TO_SHOW_IDEAS = "CHANGE_PAGE_TO_SHOW_IDEAS";
 
 function reducer(state = initialState, action) {
   switch(action.type) {
@@ -13,9 +14,9 @@ function reducer(state = initialState, action) {
       return {
         currentPage: 'CREATE_IDEA'
       };
-    case 'DECREMENT':
+    case CHANGE_PAGE_TO_SHOW_IDEAS:
       return {
-        currentPage: 'SHOW_IDEA'
+        currentPage: 'SHOW_IDEAS'
       };
     default:
       return state;
