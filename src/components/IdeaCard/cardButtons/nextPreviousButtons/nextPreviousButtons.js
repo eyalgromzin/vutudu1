@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './nextPreviousButtons.css'
 import '../../ideaCard.css'
 
 export default class IdeaNextPreviousButtons extends Component {

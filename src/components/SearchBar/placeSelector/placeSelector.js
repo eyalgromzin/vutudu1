@@ -22,8 +22,8 @@ export default class PlaceSelector extends Component {
       <div class="searchBarChooserContainer">
         <div class="searchBarChooserData">
           <div>
-            <img src={require("images/placeIcon.png")} class="searchBarIcon" />
-            <input id="placeInput" placeholder="place (park)" type="text" onChange={this.handleChange}  />
+            <img src={require("images/placeIcon.png")} class="searchBarIcon verticalMiddleAlign" />
+            <input id="placeInput" placeholder="place (at work)" type="text" onChange={this.handleChange}  />
           </div>
         </div>
       </div>

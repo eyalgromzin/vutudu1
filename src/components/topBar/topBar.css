@@ -3,17 +3,28 @@
 }
 
 .topBarLogo{
-    height: 20px;
-    width: 20px;
+    height: 60px;
+    width: 60px;
     display: inline-block;
     color: white;
     font-weight: bold;
+    margin-right: 15px;
+    padding-bottom: 10px;
 }
 
 .topBarIcon{
     height:20px;
     width: 20px;
     display: inline-block;
+}
+
+#mainLogo{
+    display: inline-block;
+    color: white;
+    font-size: 60px;
+    font-family: fantasy;
+    font-weight: bold;
+
 }
 
 .TopBar{

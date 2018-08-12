@@ -16,8 +16,8 @@ export default class NumOfEopleSelector extends Component {
        
       <div class="searchBarChooserContainer" > 
         <div class="searchBarChooserData">
-          <img src={require("images/people.png")} class="searchBarIcon" />
-            <select id="numOfPeopleChooser" >
+          <img src={require("images/people.png")} class="searchBarIcon " />
+            <select id="numOfPeopleChooser" class="" >
               <option value="1" class="timeChooserOption">1</option>
               <option value="2" class="timeChooserOption" selected="selected">2</option>
               <option value="2c" class="timeChooserOption">couple</option>

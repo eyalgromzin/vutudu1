@@ -16,7 +16,7 @@ export default class TimePicker extends Component {
        
       <div class="searchBarChooserContainer" > 
         <div class="searchBarChooserData">
-          <img src={require("images/time.png")} class="searchBarIcon" />
+          <img src={require("images/time.png")} class="searchBarIcon verticalMiddleAlign" />
             <select id="timeChooser">
               <option value="1" class="timeChooserOption">1m</option>
               <option value="10" class="timeChooserOption">10m</option>

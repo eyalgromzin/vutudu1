@@ -35,8 +35,8 @@ class TopBar extends Component {
     return (
       <div id="TopBar mainContent">
         <div class="mainContent"> 
-          <img src={require("images/logo.png")} class="topBarLogo verticalMiddleAlign" />
-          VUTUDU
+          <img src={require("images/logo3.png")} class="topBarLogo verticalMiddleAlign" />
+          <div id="mainLogo" class=""> VUTUDU </div> 
           <img src={require("images/newIdea.png")} class="topBarIcon verticalMiddleAlign alignRight" onClick={this.handleNewIdeaClick} />
           <img src={require("images/newIdea.png")} class="topBarIcon verticalMiddleAlign alignRight" onClick={this.handleShowIdeasClick} />
         </div>

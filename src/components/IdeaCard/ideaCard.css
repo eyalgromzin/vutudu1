@@ -4,9 +4,11 @@
 }
 
 #ideaTitle{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: cursive;
     color: black;
     font-size: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 #ideaMainContent{
@@ -17,11 +19,13 @@
 #ideaContentText{
     color: grey;
     font-size: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 #ideaCard{
     border-width: 5px;
-    border-color: red;
+    border-color: #56AAC5;
     border-style: solid;
     background-color: azure;
     min-height: 400px;

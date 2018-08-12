@@ -1,4 +1,5 @@
 #cardCountInfo{
     display: inline-block;
     float: right;
+    font-feature-settings: cursive;
 }

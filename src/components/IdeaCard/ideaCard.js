@@ -23,7 +23,14 @@ export default class IdeaCard extends Component {
           <div id="ideaCard"> 
             <div id="ideaTitle"> title </div>
             <div id="ideaMainContentContainer">
-              <div id="ideaContentText"> content content content content content content  </div>
+              <div id="ideaContentText"> 
+              content content content content content content <br /> 
+              content content content content content content content content  <br />
+              content content content content content content <br /> 
+              content content content content content content content content  <br />
+              content content content content content content <br /> 
+              content content content content content content content content  <br />
+              </div>
               <div id="ideaMainContentBottomButtons"> 
                 <IdeaAttachmentsButton />
                 <IdeaPlace />
