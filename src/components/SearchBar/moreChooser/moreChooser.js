@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './moreChooser.css'
+import '../searchBarCommonStyles.css'
 
 export default class MoreChooser extends Component {
   constructor(){
@@ -20,9 +21,8 @@ export default class MoreChooser extends Component {
     return (
       <div class="searchBarChooserContainer" > 
         <div class="searchBarChooserData">
-          <span class="searchBarText"> More... </span>
           <div>
-            <input type="text" onChange={this.handleChange} />
+            <input type="text" placeholder="#productive" onChange={this.handleChange} />
           </div>
         </div>
       </div>

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './placeSelector.css';
+import '../searchBarCommonStyles.css'
 
 export default class PlaceSelector extends Component {
   constructor(){
@@ -18,12 +19,11 @@ export default class PlaceSelector extends Component {
 
   render() {
     return (
-      <div class="searchBarChooserContainer" > 
+      <div class="searchBarChooserContainer">
         <div class="searchBarChooserData">
-          <img src={require("images/placeIcon.png")} class="searchBarIcon" />
-          <span class="searchBarText"> Place </span>
           <div>
-            <input type="text" onChange={this.handleChange} />
+            <img src={require("images/placeIcon.png")} class="searchBarIcon" />
+            <input id="placeInput" placeholder="place (park)" type="text" onChange={this.handleChange}  />
           </div>
         </div>
       </div>

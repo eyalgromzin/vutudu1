@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './searchButton.css'
-import 'commonCss.css'
+import '../searchBarCommonStyles.css'
 
 export default class SearchButton extends Component {
   render() {

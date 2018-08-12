@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './timePicker.css'
-import '../searchBar.css';
+import '../searchBarCommonStyles.css'
 
 export default class TimePicker extends Component {
   constructor(){
@@ -17,8 +17,6 @@ export default class TimePicker extends Component {
       <div class="searchBarChooserContainer" > 
         <div class="searchBarChooserData">
           <img src={require("images/time.png")} class="searchBarIcon" />
-          <span class="searchBarText"> Time </span>
-          <div>
             <select id="timeChooser">
               <option value="1" class="timeChooserOption">1m</option>
               <option value="10" class="timeChooserOption">10m</option>
@@ -26,7 +24,6 @@ export default class TimePicker extends Component {
               <option value="60" class="timeChooserOption">1h</option>
               <option value="6000" class="timeChooserOption">1h+</option>
             </select>
-          </div>
         </div>
       </div>
     )

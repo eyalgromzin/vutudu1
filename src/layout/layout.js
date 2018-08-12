@@ -12,7 +12,7 @@ import store from '../redux/store'
 import TopBar from '../components/topBar/topBar'
 import SearchBar from '../components/searchBar/searchBar'
 import IdeaCard from '../components/ideaCard/ideaCard'
-import CreateIdeaBar from '../components/searchBar/create/createIdeaBar/createIdeaBar'
+import CreateIdeaBar from '../components/searchBar/createIdeaBar'
 import CreateIdeaCard from '../components/ideaCard/createIdeaCard'
 
 export const showIdeaPage = 'SHOW_IDEAS';

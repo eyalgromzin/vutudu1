@@ -18,6 +18,9 @@
     display: inline-block;
     background-color: white;
     margin: 20px;
+    border-color: peachpuff;
+    border-width: 5px;
+    border-style: solid;
 }
 
 #searchBar{

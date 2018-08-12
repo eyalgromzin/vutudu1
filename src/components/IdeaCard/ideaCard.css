@@ -4,8 +4,9 @@
 }
 
 #ideaTitle{
-    height: 25px;
-    background-color: bisque;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black;
+    font-size: 40px;
 }
 
 #ideaMainContent{
@@ -13,8 +14,25 @@
     height: 500px;
 }
 
+#ideaContentText{
+    color: grey;
+    font-size: 25px;
+}
+
+#ideaCard{
+    border-width: 5px;
+    border-color: red;
+    border-style: solid;
+    background-color: azure;
+    min-height: 400px;
+}
+
 #statusButtons{
     margin-top: 5px;
+}
+
+#ideaMainContentBottomButtons{
+    height:30px;
 }
 
 #ideaContent{

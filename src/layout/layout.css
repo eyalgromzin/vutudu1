@@ -1,9 +1,12 @@
 #mainPage{
-    background-color: beige;
+
   }
   
   body{
-    background-color: beige;
+    background-image: url('../images/topBackground.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 35%;
+    background-color: black;
   }
   
   .mainContent{
