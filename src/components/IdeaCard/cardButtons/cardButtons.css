@@ -3,3 +3,9 @@
     width: 20px;
     float: right;
 }
+
+.cardBottomButton{
+    height: 25px;
+    float: right;
+    margin-bottom: 10px;
+}

@@ -37,14 +37,14 @@ class Layout extends Component {
           <div class="mainContent">
             {this.props.currentPage == createIdeaPage ? 
               <React.Fragment>
-                <SearchBar />
-                <IdeaCard />
-              </React.Fragment> 
-              :
-              <React.Fragment>
                 <CreateIdeaBar />
                 <CreateIdeaCard />
               </React.Fragment>
+              :
+              <React.Fragment>
+                <SearchBar />
+                <IdeaCard />
+              </React.Fragment> 
               
             }
           </div>

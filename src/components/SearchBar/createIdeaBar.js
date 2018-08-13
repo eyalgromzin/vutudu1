@@ -12,8 +12,7 @@ export default class CreateIdeaBar extends Component {
       <div id="searchBar">
         <PlaceSelector />
         <TimePicker />
-        <NumOfPeopleCreator />
-        <MoreChooser />
+        <NumOfPeopleCreator />        
       </div>
     )
   }

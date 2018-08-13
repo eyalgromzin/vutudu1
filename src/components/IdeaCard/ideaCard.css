@@ -21,6 +21,7 @@
     font-size: 25px;
     padding-left: 10px;
     padding-right: 10px;
+    height: 265px;
 }
 
 #ideaCard{
@@ -29,6 +30,7 @@
     border-style: solid;
     background-color: azure;
     min-height: 400px;
+    position: relative;
 }
 
 #statusButtons{
@@ -36,6 +38,7 @@
 }
 
 #ideaMainContentBottomButtons{
+    position: absolute;
     height:30px;
 }
 
@@ -74,4 +77,9 @@
     border-bottom-color: #56AAC5;
     margin: 10px;
     border-width: 2px;
+    height: 25px;
+}
+
+#ideaMainContentContainer{
+    height: 200px;
 }

@@ -10,7 +10,7 @@ export default class IdeaAttachmentButton extends Component {
   render() {
     return (
       <React.Fragment>
-        <img src={require("images/attachmentIcon.png")} id="attachmentsButton" class="subjectButton" onClick={this.handleAttachmentsClick}/>
+        <img src={require("images/attachmentIcon.png")} id="attachmentsButton" class="cardBottomButton" onClick={this.handleAttachmentsClick}/>
       </React.Fragment>
     )
   }

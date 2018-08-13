@@ -6,7 +6,7 @@ import TimeIndicator from './statsButtons/timeIndicator/timeIndicator'
 import IdeaPreviousNextButtons from './cardButtons/nextPreviousButtons/nextPreviousButtons'
 import CardCountInfo from './cardButtons/cardCountInfo/cardCountInfo'
 import IdeaAttachmentsButton from './cardButtons/ideaAttachmentsButton/ideaAttachmentButton'
-import IdeaPlace from './cardButtons/placeButton/placeButton'
+import IdeaPlaceButton from './cardButtons/placeButton/placeButton'
 
 
 export default class IdeaCard extends Component {
@@ -25,19 +25,17 @@ export default class IdeaCard extends Component {
             <CardCountInfo />
             </div>
             <div id="ideaTitle"> title </div>
-            <div id="ideaMainContentContainer">
-              <div id="ideaContentText"> 
+            <div id="ideaContentText"> 
               content content content content content content <br /> 
               content content content content content content content content  <br />
               content content content content content content <br /> 
               content content content content content content content content  <br />
               content content content content content content <br /> 
               content content content content content content content content  <br />
-              </div>
-              <div id="ideaMainContentBottomButtons"> 
-                <IdeaAttachmentsButton />
-                <IdeaPlace />
-              </div>
+            </div>
+            <div id="`ideaMainContentBottomButtons`"> 
+              <IdeaAttachmentsButton />
+              <IdeaPlaceButton />
             </div>
           </div>
           <div id="statusButtons">

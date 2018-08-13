@@ -8,8 +8,7 @@ constructor(props){
   super(props);
 
   this.state ={
-    title: "",
-    countent: ""
+    
   }
 
   this.handleChange = this.handleChange.bind(this);
@@ -21,12 +20,19 @@ handleChange(event) {
 
   render() {
     return (
-      <div id="ideaCard"> 
-        <div id="ideaCardContent">
-          <input type="text" id="newIdeaTitle" value={this.state.title} placeholder="<title>" onchange={this.handleChange}/>
-          <textarea type="text" id="newIdeaContent" value={this.state.content} placeholder="<content>" onchange={this.handleChange}/>
+      <React.Fragment>
+      <div id="createIdeaContainer">
+        <div id="ideaCard"> 
+          <div id="ideaCardContent">
+            <input type="text" id="newIdeaTitle" value={this.state.title} placeholder="<title>" onchange={this.handleChange}/>
+            <textarea type="text" id="newIdeaContent" value={this.state.content} placeholder="<content>" onchange={this.handleChange}/>
+          </div>
+        </div>
+        <div class="alignRight">
+          <div id="createIdeaButton"> create </div>
         </div>
       </div>
+      </React.Fragment>
     )
   }
 }
