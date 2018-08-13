@@ -1,0 +1,22 @@
+#newIdeaTitleContainer{
+    margin-bottom: 5px;
+}
+
+#ideaCardContent{
+    margin:5px;
+    
+}
+
+input:focus {
+    outline:none;
+}
+
+#newIdeaTitle{
+    border:none;
+    width: 100%;
+}
+
+#newIdeaContent{
+    border:none;
+    width: 100%;
+}
