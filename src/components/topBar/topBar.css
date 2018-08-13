@@ -18,6 +18,14 @@
     display: inline-block;
 }
 
+#newIdeaButton{
+    margin-right: 10px;
+}
+
+#searchIdeasButton{
+    margin-right: 10px;
+}
+
 #mainLogo{
     display: inline-block;
     color: white;

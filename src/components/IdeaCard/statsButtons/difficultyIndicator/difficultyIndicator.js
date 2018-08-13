@@ -7,9 +7,11 @@ export default class DiffictultyIndicator extends Component {
     return (
       <div class="bottomIndicator">
         <img src={require("images/difficulty.png")} id="difficultyImage" class="bottomButton" onClick={this.handleAttachmentsClick}/>
-        <img src={require("images/downArrow.png")} id="decreaseDifficulty" class="bottomButton" onClick={this.handleAttachmentsClick}/>
         <img src={require("images/upArrow.png")} id="increaseDifficultu" class="bottomButton" onClick={this.handleAttachmentsClick}/>
+        10
+        <img src={require("images/downArrow.png")} id="decreaseDifficulty" class="bottomButton" onClick={this.handleAttachmentsClick}/>        
         20
+        <span> (65%)</span>
       </div>
     )
   }

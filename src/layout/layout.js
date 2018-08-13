@@ -24,7 +24,7 @@ class Layout extends Component {
 
     //TODO: get current page from redux
     this.state = {
-      currentPage: createIdeaPage,
+      currentPage: showIdeaPage,
       place: ''
     }
   }
@@ -35,16 +35,17 @@ class Layout extends Component {
         <div id="mainPage">
           <TopBar />
           <div class="mainContent">
-            {this.props.currentPage == showIdeaPage ? 
-              <React.Fragment>
-                <SearchBar />
-                <IdeaCard />
-              </React.Fragment> 
-              :
+            {this.props.currentPage == createIdeaPage ? 
               <React.Fragment>
                 <CreateIdeaBar />
                 <CreateIdeaCard />
               </React.Fragment>
+              :
+              <React.Fragment>
+                <SearchBar />
+                <IdeaCard />
+              </React.Fragment> 
+              
             }
           </div>
         </div>

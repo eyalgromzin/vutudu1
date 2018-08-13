@@ -4,5 +4,9 @@
 }
 
 #ideaRightArrow{
-    margin-right: 80px;
+}
+
+#ideaNextPreviousButtons{
+    display: inline-block;
+    width: 8%;
 }

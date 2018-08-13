@@ -10,6 +10,7 @@ export default class LikeDislike extends Component {
         15
         <img src={require("images/dislike.png")} id="dislikeButton" class="bottomButton" onClick={this.handleDislikeClick}/>
         20
+        <span> (45%)</span>
       </div>
     )
   }

@@ -5,7 +5,7 @@ export default class CardCountInfo extends Component {
   render() {
     return (
       <div id="cardCountInfo">
-        3/13
+        11/13
       </div>
     )
   }

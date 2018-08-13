@@ -13,14 +13,17 @@ export default class IdeaCard extends Component {
   render() {
     return (
       <div id="ideaCardWithButtons">
-          <div id="topCardButtons">
-            <IdeaPreviousNextButtons />
-            <LikeDislike />
-            <TimeIndicator />
-            <DifficultyIndicator />
-            <CardCountInfo />
-          </div>
+          
           <div id="ideaCard"> 
+            <div id="topCardButtons">
+              <IdeaPreviousNextButtons />
+              <div id="cardIndicators"> 
+              <LikeDislike />
+              <TimeIndicator />
+              <DifficultyIndicator />
+            </div>
+            <CardCountInfo />
+            </div>
             <div id="ideaTitle"> title </div>
             <div id="ideaMainContentContainer">
               <div id="ideaContentText"> 
