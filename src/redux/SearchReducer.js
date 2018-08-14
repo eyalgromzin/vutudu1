@@ -2,10 +2,13 @@ import React from 'react';
 import { combineReducers } from "redux";
 
 const initialState = {
-    place: ''
+    place: '',
+    time: 5,
+    numOfPeople: 1,
+    more: 'more'
   };
 
-  function reducer(state = initialState, action) {
+  function searchReducer(state = initialState, action) {
     switch(action.type) {
       case 'SET_PLACE':
         return {
@@ -16,4 +19,4 @@ const initialState = {
     }
   }
 
-  export default reducer;
+  export default searchReducer;

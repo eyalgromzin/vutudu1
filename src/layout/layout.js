@@ -45,7 +45,6 @@ class Layout extends Component {
                 <SearchBar />
                 <IdeaCard />
               </React.Fragment> 
-              
             }
           </div>
         </div>
