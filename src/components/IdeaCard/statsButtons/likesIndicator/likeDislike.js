@@ -2,16 +2,25 @@ import React, { Component } from 'react'
 import './likeDislike.css'
 import '../../ideaCard.css'
 
-export default class LikeDislike extends Component {
+class LikeDislike extends Component {
   render() {
     return (
       <div class="bottomIndicator">
         <img src={require("images/like.png")} id="likeButton" class="bottomButton" onClick={this.handleLikeClick}/>
-        15
+        {this.props.likes}
         <img src={require("images/dislike.png")} id="dislikeButton" class="bottomButton" onClick={this.handleDislikeClick}/>
-        20
+        {this.state.dislikes}
         <span> (45%)</span>
       </div>
     )
   }
 }
+
+function mapStateToProps(state) {
+  return {
+    likes: state.dislikes,
+    dislikes: state.likes,
+  };
+}
+
+export default connect(mapStateToProps)(LikeDislike);

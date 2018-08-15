@@ -9,7 +9,7 @@ import IdeaAttachmentsButton from './cardButtons/ideaAttachmentsButton/ideaAttac
 import IdeaPlaceButton from './cardButtons/placeButton/placeButton'
 
 
-export default class IdeaCard extends Component {
+class IdeaCard extends Component {
   render() {
     return (
       <div id="ideaCardWithButtons">
@@ -24,14 +24,11 @@ export default class IdeaCard extends Component {
             </div>
             <CardCountInfo />
             </div>
-            <div id="ideaTitle"> title </div>
+            <div id="ideaTitle"> 
+              {this.props.title}
+            </div>
             <div id="ideaContentText"> 
-              content content content content content content <br /> 
-              content content content content content content content content  <br />
-              content content content content content content <br /> 
-              content content content content content content content content  <br />
-              content content content content content content <br /> 
-              content content content content content content content content  <br />
+              {this.props.content}
             </div>
             <div id="`ideaMainContentBottomButtons`"> 
               <IdeaAttachmentsButton />
@@ -44,3 +41,12 @@ export default class IdeaCard extends Component {
     )
   }
 }
+
+function mapStateToProps(state) {
+  return {
+    content: state.content,
+    title: state.title
+  };
+}
+
+export default connect(mapStateToProps)(IdeaCard);

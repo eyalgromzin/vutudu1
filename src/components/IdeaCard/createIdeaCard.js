@@ -7,10 +7,6 @@ export default class CreateIdeaCard extends Component {
 constructor(props){
   super(props);
 
-  this.state ={
-    
-  }
-
   this.handleChange = this.handleChange.bind(this);
 }
 

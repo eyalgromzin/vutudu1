@@ -3,6 +3,7 @@ import './searchButton.css'
 import '../searchBarCommonStyles.css'
 import { connect } from 'react-redux';
 import {searchInDB} from 'db/dbHandler.js'
+import {SAVE_IDEAS} from 'redux/ideasReducer.js'
 
 class SearchButton extends Component {
   constructor(props){
@@ -18,13 +19,20 @@ class SearchButton extends Component {
     this.handleSearchClick = this.handleSearchClick.bind(this);
   }
 
+
+  saveIdeasToRedux = (ideas) => {
+  this.props.dispatch({ type: "SAVE_IDEAS",
+                      payload: ideas
+                      });
+}
+
   handleSearchClick(){
     //get from redux the search criterias - done by map state to props
     //get from the DB results according to this criteria
     var results = searchInDB(this.props.place,this.props.time,this.props.numOfPeople,this.props.more);
 
     //save to redux all current ideas
-    
+    saveIdeasToRedux(results);
 
     //load ideas in the page.
   }
