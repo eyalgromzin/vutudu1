@@ -1,14 +1,36 @@
 import React, { Component } from 'react'
 import './nextPreviousButtons.css'
 import '../../ideaCard.css'
+import {CHANGE_CURRENT_IDEA} from 'redux/ideasReducer'
 
-export default class IdeaNextPreviousButtons extends Component {
+
+ class IdeaNextPreviousButtons extends Component {
   rightArrowClick(){
+    var ideasCount = this.props.ideas.length;
+    var currentIdeaIndex = this.props.currentIdeaIndex;
+    if(currentIdeaIndex == ideasCount){
+      currentIdeaIndex = 1;
+    }else {
+      currentIdeaIndex++;
+    }
 
+    var currentIdea = this.props.ideas[currentIdea - 1];
+    
+    this.props.dispatch({ type: CHANGE_CURRENT_IDEA, payload: currentIdeaIndex });
   }
 
   leftArrowClick(){
+    var ideasCount = this.props.ideas.length;
+    var currentIdeaIndex = this.props.currentIdeaIndex;
+    if(currentIdeaIndex == 0){
+      currentIdeaIndex = this.props.ideas.length;
+    }else {
+      currentIdeaIndex--;
+    }
 
+    var currentIdea = this.props.ideas[currentIdea - 1];
+    
+    this.props.dispatch({ type: CHANGE_CURRENT_IDEA, payload: currentIdeaIndex });
   }
 
   render() {
@@ -22,3 +44,12 @@ export default class IdeaNextPreviousButtons extends Component {
     )
   }
 }
+
+function mapStateToProps(state) {
+    return {
+      currentIdeaIndex: state.searchReducer.currentIdeaIndex,
+      ideas: state.searchReducer.ideas
+    };
+  }
+
+  export default connect(mapStateToProps)(IdeaNextPreviousButtons);

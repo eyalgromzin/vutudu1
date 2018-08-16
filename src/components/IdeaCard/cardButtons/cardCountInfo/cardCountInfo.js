@@ -1,12 +1,21 @@
 import React, { Component } from 'react'
 import './cardCountInfo.css'
 
-export default class CardCountInfo extends Component {
+class CardCountInfo extends Component {
   render() {
     return (
       <div id="cardCountInfo">
-        11/13
+        {this.props.currentIdeaIndex}/{this.props.ideas.length}
       </div>
     )
   }
 }
+
+function mapStateToProps(state) {
+    return {
+      currentIdeaIndex: state.searchReducer.currentIdeaIndex,
+      ideas: state.searchReducer.ideas
+    };
+  }
+
+  export default connect(mapStateToProps)(CardCountInfo);
