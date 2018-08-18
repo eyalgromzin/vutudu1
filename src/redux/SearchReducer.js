@@ -2,7 +2,7 @@ import React from 'react';
 import { combineReducers } from "redux";
 
 const initialState = {
-    place: '',
+    place: 'place',
     time: 5,
     numOfPeople: 1,
     more: 'more'
@@ -12,8 +12,10 @@ const initialState = {
     switch(action.type) {
       case 'SET_PLACE':
         return {
-          place: action.payload 
+          ...state,
+          place: action.payload,          
         };
+
       default:
         return state;
     }

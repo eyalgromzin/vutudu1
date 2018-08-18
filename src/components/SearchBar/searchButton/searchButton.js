@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
 import './searchButton.css'
 import '../searchBarCommonStyles.css'
-import { connect } from 'react-redux';
-import {searchInDB} from 'db/dbHandler.js'
-import {SAVE_IDEAS} from 'redux/ideasReducer.js'
+import { connect } from 'react-redux'
+import searchInDB from 'db/dbHandler.js'
+import { SAVE_IDEAS } from 'redux/ideasReducer.js'
+
+var search = searchInDB;
 
 class SearchButton extends Component {
   constructor(props){
@@ -13,18 +15,18 @@ class SearchButton extends Component {
       place: 'bus station',
       time: 5,
       numOfPeople: 1,
-      more: '#productive'      
+      more: '#productive',      
     }
 
+    this.saveIdeasToRedux = this.saveIdeasToRedux.bind(this);
     this.handleSearchClick = this.handleSearchClick.bind(this);
   }
 
-
-  saveIdeasToRedux = (ideas) => {
-  this.props.dispatch({ type: "SAVE_IDEAS",
-                      payload: ideas
-                      });
-}
+  saveIdeasToRedux(ideas){
+    this.props.dispatch({ type: "SAVE_IDEAS", 
+                            payload: ideas 
+                          });
+  }
 
   handleSearchClick(){
     //get from redux the search criterias - done by map state to props
@@ -32,16 +34,18 @@ class SearchButton extends Component {
     var results = searchInDB(this.props.place,this.props.time,this.props.numOfPeople,this.props.more);
 
     //save to redux all current ideas
-    saveIdeasToRedux(results);
+    this.saveIdeasToRedux(results);
 
     //load ideas in the page.
   }
 
   render() {
     return (
+      <a>
       <div class="displayInlineBlock" id="searchButton" onClick={this.handleSearchClick}>
         search
       </div>
+      </a>
     )
   }
 }

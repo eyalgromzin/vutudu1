@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import './topBar.css'
 import 'commonCss.css'
-import { CHANGE_PAGE_TO_CREATE_IDEA } from 'redux/CommonReducer'
-import { CHANGE_PAGE_TO_SHOW_IDEAS } from '../../redux/CommonReducer';
+import { CHANGE_PAGE_TO_CREATE_IDEA } from  'redux/commonReducer'
+import { CHANGE_PAGE_TO_SHOW_IDEAS } from   'redux/commonReducer'
 import { connect } from 'react-redux';
 
 class TopBar extends Component {

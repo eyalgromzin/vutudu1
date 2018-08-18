@@ -11,6 +11,7 @@ export default class PlaceSelector extends Component {
     }
 
     this.handleChange = this.handleChange.bind(this);
+    
   }
 
   handleChange(event) {

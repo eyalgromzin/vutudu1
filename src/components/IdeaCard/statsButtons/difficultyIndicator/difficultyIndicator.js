@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './difficultyIndicator.css'
 import '../../ideaCard.css'
+import { connect } from 'react-redux';
 
 class DiffictultyIndicator extends Component {
   render() {
@@ -11,7 +12,7 @@ class DiffictultyIndicator extends Component {
         {this.props.hardCount}
         <img src={require("images/downArrow.png")} id="decreaseDifficulty" class="bottomButton" onClick={this.handleAttachmentsClick}/>        
         {this.props.easyCount}
-        <span> {Math.round((this.props.hardCount / this.props.easy) * 100)}  </span>
+        <span> ({Math.round((this.props.hardCount/this.props.easyCount) * 100) }%)  </span>
       </div>
     )
   }
@@ -19,8 +20,8 @@ class DiffictultyIndicator extends Component {
 
 function mapStateToProps(state) {
   return {
-    hardCount: state.hard,
-    easyCount: state.easy,
+    hardCount: state.ideasReducer.ideas[state.ideasReducer.currentIdeaIndex].hardCount,
+    easyCount: state.ideasReducer.ideas[state.ideasReducer.currentIdeaIndex].easyCount,
   };
 }
 

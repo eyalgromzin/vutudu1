@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import './numOfPeopleSelector.css'
 import '../searchBarCommonStyles.css'
 
-export default class NumOfEopleSelector extends Component {
+export default class NumOfPeopleSelector extends Component {
   constructor(){
     super();
   }

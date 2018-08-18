@@ -1,9 +1,10 @@
 #ideaLeftArrow{
-    margin-right: 4px;
-    padding-right: 6px;
+    display: inline-block;
+    margin-right: 6px;
 }
 
 #ideaRightArrow{
+    display: inline-block;
 }
 
 #ideaNextPreviousButtons{

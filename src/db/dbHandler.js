@@ -1,6 +1,6 @@
 
-
-export function searchInDB(place,time,numOfPeople,more){
+let searchInDB;
+export default searchInDB = (place,time,numOfPeople,more) => {
   return 
   [
     {

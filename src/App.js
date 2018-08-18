@@ -11,6 +11,8 @@ export const showIdeaPage = 'SHOW_IDEA';
 export const createIdeaPage = 'CREATE_IDEA';
 
 class App extends Component {
+  
+
   constructor(){
     super();
 

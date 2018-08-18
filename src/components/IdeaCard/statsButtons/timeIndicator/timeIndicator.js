@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './timeIndicator.css'
+import { connect } from 'react-redux';
 
 class TimeIndicator extends Component {
   render() {
@@ -16,8 +17,8 @@ class TimeIndicator extends Component {
 
 function mapStateToProps(state) {
   return {
-    hardCount: state.hard,
-    easyCount: state.easy,
+    minTime: state.ideasReducer.ideas[state.ideasReducer.currentIdeaIndex].minTime,
+    maxTime: state.ideasReducer.ideas[state.ideasReducer.currentIdeaIndex].maxTime,
   };
 }
 

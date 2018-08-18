@@ -12,10 +12,12 @@ function reducer(state = initialState, action) {
   switch(action.type) {
     case CHANGE_PAGE_TO_CREATE_IDEA:
       return {
+        ...state,
         currentPage: 'CREATE_IDEA'
       };
     case CHANGE_PAGE_TO_SHOW_IDEAS:
       return {
+        ...state,
         currentPage: 'SHOW_IDEAS'
       };
     default:

@@ -1,11 +1,12 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import './cardCountInfo.css'
 
 class CardCountInfo extends Component {
   render() {
     return (
       <div id="cardCountInfo">
-        {this.props.currentIdeaIndex}/{this.props.ideas.length}
+        {this.props.currentIdeaIndex + 1}/{this.props.ideas.length}
       </div>
     )
   }
@@ -13,9 +14,9 @@ class CardCountInfo extends Component {
 
 function mapStateToProps(state) {
     return {
-      currentIdeaIndex: state.searchReducer.currentIdeaIndex,
-      ideas: state.searchReducer.ideas
+      currentIdeaIndex: state.ideasReducer.currentIdeaIndex,
+      ideas: state.ideasReducer.ideas,
     };
   }
 
-  export default connect(mapStateToProps)(CardCountInfo);
+export default connect(mapStateToProps)(CardCountInfo);

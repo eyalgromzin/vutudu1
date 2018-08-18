@@ -1,7 +1,6 @@
 #cardCountInfo{
     display: inline-block;
-    float: right;
+    /* float: right; */
     font-family: cursive;
-    width: 8%;
-    text-align: right;
+    width: 30px;
 }

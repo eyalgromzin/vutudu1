@@ -7,13 +7,17 @@ import IdeaPreviousNextButtons from './cardButtons/nextPreviousButtons/nextPrevi
 import CardCountInfo from './cardButtons/cardCountInfo/cardCountInfo'
 import IdeaAttachmentsButton from './cardButtons/ideaAttachmentsButton/ideaAttachmentButton'
 import IdeaPlaceButton from './cardButtons/placeButton/placeButton'
+import { connect } from 'react-redux';
 
 
 class IdeaCard extends Component {
+  constructor(props){
+    super(props);
+  }
+
   render() {
     return (
       <div id="ideaCardWithButtons">
-          
           <div id="ideaCard"> 
             <div id="topCardButtons">
               <IdeaPreviousNextButtons />
@@ -22,7 +26,6 @@ class IdeaCard extends Component {
               <TimeIndicator />
               <DifficultyIndicator />
             </div>
-            <CardCountInfo />
             </div>
             <div id="ideaTitle"> 
               {this.props.title}
@@ -44,8 +47,8 @@ class IdeaCard extends Component {
 
 function mapStateToProps(state) {
   return {
-    content: state.content,
-    title: state.title
+    content: state.ideasReducer.ideas[state.ideasReducer.currentIdeaIndex].content,
+    title: state.ideasReducer.ideas[state.ideasReducer.currentIdeaIndex].title
   };
 }
 

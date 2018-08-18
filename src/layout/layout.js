@@ -19,6 +19,7 @@ export const showIdeaPage = 'SHOW_IDEAS';
 export const createIdeaPage = 'CREATE_IDEA';
 
 class Layout extends Component {
+
   constructor(){
     super();
 
