@@ -46,6 +46,8 @@ export const LIKE_IDEA = "LIKE_IDEA";
 export const DISLIKE_IDEA = "DISLIKE_IDEA";
 export const ADD_TIME = "ADD_TIME";
 export const REDUCE_TIME = "REDUCE_TIME";
+export const ADD_HARD_TO_IDEA = "ADD_HARD_TO_IDEA";
+export const ADD_EASY_TO_IDEA = "ADD_EASY_TO_IDEA";
 
 function reducer(state = initialState, action) {
   switch(action.type) {
@@ -67,6 +69,7 @@ function reducer(state = initialState, action) {
       ...state,
       currentIdea
     }
+
     case DISLIKE_IDEA:
     var currentIdea = state.ideas[state.currentIdeaIndex];
     currentIdea.dislikes = currentIdea.dislikes + 1;
@@ -75,6 +78,8 @@ function reducer(state = initialState, action) {
       ...state,
       currentIdea
     }
+
+    case 
 
     default:
       return state;
