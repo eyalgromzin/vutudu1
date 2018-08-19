@@ -1,6 +1,6 @@
 
 let searchInDB;
-export default searchInDB = (place,time,numOfPeople,more) => {
+searchInDB = (place,time,numOfPeople,more) => {
   return 
   [
     {
@@ -82,3 +82,5 @@ export default searchInDB = (place,time,numOfPeople,more) => {
     }
   ]
 }
+
+export default searchInDB;

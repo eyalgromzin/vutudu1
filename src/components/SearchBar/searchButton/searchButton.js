@@ -3,7 +3,7 @@ import './searchButton.css'
 import '../searchBarCommonStyles.css'
 import { connect } from 'react-redux'
 import searchInDB from 'db/dbHandler.js'
-import { SAVE_IDEAS } from 'redux/ideasReducer.js'
+import { SAVE_IDEAS } from 'redux/ideasReducer'
 
 var search = searchInDB;
 
