@@ -3,7 +3,18 @@ import { combineReducers } from "redux";
 
 const initialState = {
   currentIdeaIndex: 0,
-  ideas: [{
+  // ideas: {
+  //   id: '111',
+  //   title: 'aaaa',
+  //   content: 'content1',
+  //   likes: 3,
+  //   dislikes: 4,
+  //   hardCount: 5,
+  //   easyCount: 6,
+  //   minTime: 7,
+  //   maxTime: 8
+  // }
+  ideas: ([{
     id: '111',
     title: 'aaaa',
     content: 'content1',
@@ -35,7 +46,7 @@ const initialState = {
     easyCount: 18,
     minTime: 19,
     maxTime: 20
-  }],
+  }])
   
 };
 

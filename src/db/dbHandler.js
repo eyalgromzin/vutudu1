@@ -1,8 +1,8 @@
 
 let searchInDB;
 searchInDB = (place,time,numOfPeople,more) => {
-  return 
-  [
+  var result = 
+  ([
     {
       "id": "5b729d70ea7c3833cc0af45f",
       "content": "Sit quis commodo et duis fugiat duis. Esse mollit consequat aliqua est velit ullamco quis do laborum ad occaecat mollit Lorem ipsum. Aute labore reprehenderit id magna ullamco. Ut est in aliquip ex minim ipsum sit excepteur adipisicing sunt eiusmod occaecat.\r\n",
@@ -80,7 +80,9 @@ searchInDB = (place,time,numOfPeople,more) => {
       "minTime": 4,
       "maxTime": 6
     }
-  ]
+  ]);
+
+  return result
 }
 
 export default searchInDB;
