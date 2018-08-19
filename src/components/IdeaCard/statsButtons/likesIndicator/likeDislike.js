@@ -2,8 +2,25 @@ import React, { Component } from 'react'
 import './likeDislike.css'
 import '../../ideaCard.css'
 import { connect } from 'react-redux';
+import { DISLIKE_IDEA } from 'redux/ideasReducer'
+import { LIKE_IDEA } from 'redux/ideasReducer'
 
 class LikeDislike extends Component {
+  constructor(props){
+    super(props);
+
+    this.handleLikeClick = this.handleLikeClick.bind(this);
+    this.handleDislikeClick = this.handleDislikeClick.bind(this);
+  }
+
+  handleDislikeClick(){
+    this.props.dispatch({ type: DISLIKE_IDEA });
+  }
+
+  handleLikeClick(){
+    this.props.dispatch({ type: LIKE_IDEA });
+  }
+
   render() {
     return (
       <div class="bottomIndicator">

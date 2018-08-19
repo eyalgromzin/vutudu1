@@ -1,5 +1,6 @@
 import React from 'react';
 import { combineReducers } from "redux";
+import update from "react-addons-update";
 
 const initialState = {
   currentIdeaIndex: 0,
@@ -41,6 +42,10 @@ const initialState = {
 
 export const SAVE_IDEAS = "SAVE_IDEAS";
 export const CHANGE_CURRENT_IDEA_INDEX = "CHANGE_CURRENT_IDEA_INDEX";
+export const LIKE_IDEA = "LIKE_IDEA";
+export const DISLIKE_IDEA = "LIKE_IDEA";
+export const ADD_TIME = "ADD_TIME";
+export const REDUCE_TIME = "REDUCE_TIME";
 
 function reducer(state = initialState, action) {
   switch(action.type) {
@@ -54,6 +59,20 @@ function reducer(state = initialState, action) {
         ...state,
         currentIdeaIndex: action.payload,
       };
+    case LIKE_IDEA:
+    var likesPlusOne = state.ideas[state.currentIdeaIndex].likes + 1;
+    // var updatedState = update(ideas, { 
+    //     ideas: { currentIdeaIndex: {
+    //         likes: {$set: likesPlusOne }
+    //       }
+    //     }
+    //   });
+    // return { 
+    //   ...state,
+    //   updatedState,
+    // }
+    case DISLIKE_IDEA:
+    
     default:
       return state;
   }
