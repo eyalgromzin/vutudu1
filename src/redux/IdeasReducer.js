@@ -43,7 +43,7 @@ const initialState = {
 export const SAVE_IDEAS = "SAVE_IDEAS";
 export const CHANGE_CURRENT_IDEA_INDEX = "CHANGE_CURRENT_IDEA_INDEX";
 export const LIKE_IDEA = "LIKE_IDEA";
-export const DISLIKE_IDEA = "LIKE_IDEA";
+export const DISLIKE_IDEA = "DISLIKE_IDEA";
 export const ADD_TIME = "ADD_TIME";
 export const REDUCE_TIME = "REDUCE_TIME";
 
@@ -59,20 +59,23 @@ function reducer(state = initialState, action) {
         ...state,
         currentIdeaIndex: action.payload,
       };
-    case LIKE_IDEA:
-    var likesPlusOne = state.ideas[state.currentIdeaIndex].likes + 1;
-    // var updatedState = update(ideas, { 
-    //     ideas: { currentIdeaIndex: {
-    //         likes: {$set: likesPlusOne }
-    //       }
-    //     }
-    //   });
-    // return { 
-    //   ...state,
-    //   updatedState,
-    // }
-    case DISLIKE_IDEA:
+    case LIKE_IDEA: //if it wont work , try to return a full ideas array with the changed item 
+    var currentIdea = state.ideas[state.currentIdeaIndex];
+    currentIdea.likes = currentIdea.likes + 1;
     
+    return { 
+      ...state,
+      currentIdea
+    }
+    case DISLIKE_IDEA:
+    var currentIdea = state.ideas[state.currentIdeaIndex];
+    currentIdea.dislikes = currentIdea.dislikes + 1;
+    
+    return { 
+      ...state,
+      currentIdea
+    }
+
     default:
       return state;
   }

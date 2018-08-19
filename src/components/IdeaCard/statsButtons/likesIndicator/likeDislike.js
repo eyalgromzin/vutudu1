@@ -28,7 +28,7 @@ class LikeDislike extends Component {
         {this.props.likes}
         <img src={require("images/dislike.png")} id="dislikeButton" class="bottomButton" onClick={this.handleDislikeClick}/>
         {this.props.dislikes}
-        <span> ({Math.round((this.props.likes/this.props.dislikes) * 100) }%)</span>
+        <span> ({Math.round((this.props.likes/(this.props.likes + this.props.dislikes)) * 100) }%)</span>
       </div>
     )
   }
