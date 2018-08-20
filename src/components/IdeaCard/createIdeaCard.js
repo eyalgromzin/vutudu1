@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import IdeaAttachmentsButton from './cardButtons/addAttachmentButton/addAttachmentButton'
 import IdeaPlace from './cardButtons/placeButton/placeButton'
 import './createIdeaCard.css'
+import { connect } from 'react-redux';
 
 export default class CreateIdeaCard extends Component {
 constructor(props){
@@ -37,3 +38,5 @@ constructor(props){
     )
   }
 }
+
+export default connect()(NumOfPeopleCreator);

@@ -38,5 +38,10 @@ class NumOfPeopleCreator extends Component {
   }
 }
 
+function mapStateToProps(state) {
+  return {
+    newIdea: state.ideasReducer.ideas[state.ideasReducer.currentIdeaIndex].likes,
+  };
+}
 
-export default connect()(NumOfPeopleCreator);
+export default connect(mapStateToProps)(NumOfPeopleCreator);

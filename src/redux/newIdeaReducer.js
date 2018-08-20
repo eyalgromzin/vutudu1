@@ -3,6 +3,7 @@ import { combineReducers } from "redux";
 import update from "react-addons-update";
 
 const initialState = {
+  idea:{
     title: 'title',
     content: 'content content',
     minTime: 0,
@@ -11,15 +12,14 @@ const initialState = {
     maxNumOfPeople: 2,
     place: "",
     tags: [],
-
+  }
 };
 
-export const SET_MIN_TIME = "";
-export const SET_MAX_TIME = "";
-export const SET_PLACE = "";
-export const SET_MIN_PEOPLE = "";
-export const SET_MAX_PEOPLE = "";
-
+export const SET_MIN_TIME = "SET_MIN_TIME";
+export const SET_MAX_TIME = "SET_MAX_TIME";
+export const SET_PLACE = "SET_PLACE";
+export const SET_MIN_PEOPLE = "SET_MIN_PEOPLE";
+export const SET_MAX_PEOPLE = "SET_MAX_PEOPLE";
 
 function reducer(state = initialState, action) {
   switch(action.type) {
