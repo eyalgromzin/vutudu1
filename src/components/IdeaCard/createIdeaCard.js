@@ -8,11 +8,16 @@ constructor(props){
   super(props);
 
   this.handleChange = this.handleChange.bind(this);
+  this.handleCreateIdeaClick = this.handleCreateIdeaClick.bind(this);
 }
 
-handleChange(event) {
+  handleCreateIdeaClick(event) {
+    
+  }
+
+  handleChange(event) {
     this.setState({value: event.target.value});
-}
+  }
 
   render() {
     return (
@@ -20,12 +25,12 @@ handleChange(event) {
       <div id="createIdeaContainer">
         <div id="ideaCard"> 
           <div id="ideaCardContent">
-            <input type="text" id="newIdeaTitle" value={this.state.title} placeholder="<title>" onchange={this.handleChange}/>
-            <textarea type="text" id="newIdeaContent" value={this.state.content} placeholder="<content>" onchange={this.handleChange}/>
+            <input type="text" id="newIdeaTitle" placeholder="<title>" onchange={this.handleChange}/>
+            <textarea type="text" id="newIdeaContent" placeholder="<content>" onchange={this.handleChange}/>
           </div>
         </div>
         <div class="alignRight">
-          <div id="createIdeaButton"> create </div>
+          <div id="createIdeaButton" onClick={this.handleCreateIdeaClick}> create </div>
         </div>
       </div>
       </React.Fragment>

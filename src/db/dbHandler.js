@@ -1,7 +1,5 @@
 
-let searchInDB;
-searchInDB = (place,time,numOfPeople,more) => {
-  var result = 
+var db = 
   ([
     {
       "id": "5b729d70ea7c3833cc0af45f",
@@ -82,7 +80,27 @@ searchInDB = (place,time,numOfPeople,more) => {
     }
   ]);
 
-  return result
+let searchInDB;
+searchInDB = (place,time,numOfPeople,more) => {
+  return db;
 }
 
-export default searchInDB;
+export {searchInDB};
+
+let addIdeaToDB;
+addIdeaToDB = (title, content, place,time,minNumOfPeople,maxNumOfPeople) => {
+  var dbEntry ={
+    "id": Math.round(Math.random()*10000),
+      "content": content,
+      "title": title,
+      "likes": 0,
+      "dislikes": 0,
+      "hardCount": 0,
+      "easyCount": 0,
+      "minTime": time,
+      "maxTime": time,
+      "minNumOfPeople": minNumOfPeople,
+      "maxNumOfPeople": maxNumOfPeople
+  }
+  db.push(dbEntry);
+}
