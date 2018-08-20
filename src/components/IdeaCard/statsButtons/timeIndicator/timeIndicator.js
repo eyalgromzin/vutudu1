@@ -1,15 +1,32 @@
 import React, { Component } from 'react'
 import './timeIndicator.css'
 import { connect } from 'react-redux';
+import {ADD_TIME, REDUCE_TIME} from 'redux/ideasReducer'
+
 
 class TimeIndicator extends Component {
+constructor(props){
+  super(props)
+
+  this.handleAddAddTimeClick = this.handleAddAddTimeClick.bind(this);
+  this.handleReduceTimeClick = this.handleReduceTimeClick.bind(this);
+}
+
+  handleAddAddTimeClick(){
+    this.props.dispatch({ type: ADD_TIME });
+  }
+
+  handleReduceTimeClick(){
+    this.props.dispatch({ type: REDUCE_TIME });
+  }
+
   render() {
     return (
       <div class="bottomIndicator">
-        <img src={require("images/time.png")} id="timeImage" class="bottomButton" onClick={this.handleAttachmentsClick} alt="time image"/>
-        <img src={require("images/downArrow.png")} id="decreaseTime" class="bottomButton" onClick={this.handleAttachmentsClick}/>
+        <img src={require("images/time.png")} id="timeImage" class="bottomButton" alt="time image"/>
+        <img src={require("images/downArrow.png")} id="decreaseTime" class="bottomButton" onClick={this.handleReduceTimeClick}/>
         {this.props.minTime}-{this.props.maxTime}
-        <img src={require("images/upArrow.png")} id="incrementTime" class="bottomButton" onClick={this.handleAttachmentsClick}/>
+        <img src={require("images/upArrow.png")} id="incrementTime" class="bottomButton" onClick={this.handleAddAddTimeClick}/>
       </div>
     )
   }

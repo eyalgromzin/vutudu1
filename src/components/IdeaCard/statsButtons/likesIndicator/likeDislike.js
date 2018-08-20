@@ -2,8 +2,7 @@ import React, { Component } from 'react'
 import './likeDislike.css'
 import '../../ideaCard.css'
 import { connect } from 'react-redux';
-import { DISLIKE_IDEA } from 'redux/ideasReducer'
-import { LIKE_IDEA } from 'redux/ideasReducer'
+import { LIKE_IDEA, DISLIKE_IDEA } from 'redux/ideasReducer'
 
 class LikeDislike extends Component {
   constructor(props){
