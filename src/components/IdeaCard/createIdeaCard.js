@@ -4,16 +4,30 @@ import IdeaPlace from './cardButtons/placeButton/placeButton'
 import './createIdeaCard.css'
 import { connect } from 'react-redux';
 
-export default class CreateIdeaCard extends Component {
+class CreateIdeaCard extends Component {
 constructor(props){
   super(props);
 
   this.handleChange = this.handleChange.bind(this);
   this.handleCreateIdeaClick = this.handleCreateIdeaClick.bind(this);
+  this.extractTagsFromContent= this.extractTagsFromContent.bind(this);
 }
 
   handleCreateIdeaClick(event) {
+    var tags = this.extractTagsFromContent()
+
+  }
+
+  extractTagsFromContent(){
+    var contentText = this.props.content;
+
+    var words = contentText.split(" ");
     
+    for (var i = 0; i < words.length - 1; i++) {
+      
+    }
+
+    return ["tag1","tag2"];
   }
 
   handleChange(event) {
@@ -39,4 +53,17 @@ constructor(props){
   }
 }
 
-export default connect()(NumOfPeopleCreator);
+function mapStateToProps(state) {
+  
+  return {
+    title: state.newIdeaReducer.title,
+    content: state.newIdeaReducer.content,
+    minTime: state.newIdeaReducer.minTime,
+    maxTime: state.newIdeaReducer.maxTime,
+    minNumOfPeople: state.newIdeaReducer.minNumOfPeople,
+    maxNumOfPeople: state.newIdeaReducer.maxNumOfPeople,
+    place: state.newIdeaReducer.place,
+  };
+}
+
+export default connect()(CreateIdeaCard);
