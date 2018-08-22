@@ -3,7 +3,7 @@ import '../searchBarCommonStyles.css'
 import 'commonCss.css'
 import './numOfPeopleCreator.css'
 import { connect } from 'react-redux';
-import { SET_MIN_PEOPLE, SET_MAX_PEOPLE } from 'redux/newIdeaReducer'
+import { NEW_IDEA_SET_MIN_PEOPLE, NEW_IDEA_SET_MAX_PEOPLE } from 'redux/types'
 
 class NumOfPeopleCreator extends Component {
 
@@ -15,11 +15,11 @@ class NumOfPeopleCreator extends Component {
   }
 
   minNumOfPeopleChange(event){
-    this.props.dispatch({ type: SET_MIN_PEOPLE, payload: event.target.value });
+    this.props.dispatch({ type: NEW_IDEA_SET_MIN_PEOPLE, payload: event.target.value });
   }
 
   maxNumOfPeopleChange(event){
-    this.props.dispatch({ type: SET_MAX_PEOPLE, payload: event.target.value });
+    this.props.dispatch({ type: NEW_IDEA_SET_MAX_PEOPLE, payload: event.target.value });
   }
 
   render() {

@@ -3,6 +3,7 @@ import IdeaAttachmentsButton from './cardButtons/addAttachmentButton/addAttachme
 import IdeaPlace from './cardButtons/placeButton/placeButton'
 import './createIdeaCard.css'
 import { connect } from 'react-redux';
+import { addIdeaToDB } from 'db/dbHandler.js'
 
 class CreateIdeaCard extends Component {
 constructor(props){
@@ -16,18 +17,29 @@ constructor(props){
   handleCreateIdeaClick(event) {
     var tags = this.extractTagsFromContent()
 
+    //addIdeaToDB(title, content, place,time,minNumOfPeople,maxNumOfPeople)
+    addIdeaToDB(this.props.title,
+                this.props.content,
+                this.props.place,
+                this.props.time,
+                this.props.minNumOfPeople,
+                this.props.maxNumOfPeople);
   }
 
   extractTagsFromContent(){
     var contentText = this.props.content;
-
+    
     var words = contentText.split(" ");
     
+    var tags = [];
+
     for (var i = 0; i < words.length - 1; i++) {
-      
+      if(words[i].startsWith("#")){
+        tags.push(words[i]);
+      }
     }
 
-    return ["tag1","tag2"];
+    return tags;
   }
 
   handleChange(event) {

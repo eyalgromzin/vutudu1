@@ -1,6 +1,7 @@
 import React from 'react';
 import { combineReducers } from "redux";
 import update from "react-addons-update";
+import { NEW_IDEA_SET_MIN_PEOPLE, NEW_IDEA_SET_MAX_PEOPLE } from 'redux/types'
 
 const initialState = {
   idea:{
@@ -15,20 +16,14 @@ const initialState = {
   }
 };
 
-export const SET_MIN_TIME = "SET_MIN_TIME";
-export const SET_MAX_TIME = "SET_MAX_TIME";
-export const SET_PLACE = "SET_PLACE";
-export const SET_MIN_PEOPLE = "SET_MIN_PEOPLE";
-export const SET_MAX_PEOPLE = "SET_MAX_PEOPLE";
-
 function reducer(state = initialState, action) {
   switch(action.type) {
-    case SET_MIN_PEOPLE:
+    case NEW_IDEA_SET_MIN_PEOPLE:
       return {
         ...state,
         minNumOfPeople: action.payload
       };
-    case SET_MAX_PEOPLE:
+    case NEW_IDEA_SET_MAX_PEOPLE:
       return {
         ...state,
         maxNumOfPeople: action.payload

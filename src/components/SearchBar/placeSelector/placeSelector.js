@@ -3,19 +3,14 @@ import './placeSelector.css';
 import '../searchBarCommonStyles.css'
 
 export default class PlaceSelector extends Component {
-  constructor(){
-    super();
+  constructor(props){
+    super(props);
 
     this.state = {
       place: ''
     }
 
-    this.handleChange = this.handleChange.bind(this);
-    
-  }
-
-  handleChange(event) {
-    this.setState({place: event.target.value});
+    this.handleOnChange = props.onChangeEvent;  
   }
 
   render() {
@@ -24,7 +19,7 @@ export default class PlaceSelector extends Component {
         <div class="searchBarChooserData">
           <div>
             <img src={require("images/placeIcon.png")} class="searchBarIcon verticalMiddleAlign" />
-            <input id="placeInput" placeholder="place (at work)" type="text" onChange={this.handleChange}  />
+            <input id="placeInput" placeholder="place (at work)" type="text" onChange={this.handleOnChange}  />
           </div>
         </div>
       </div>

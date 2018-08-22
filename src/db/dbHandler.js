@@ -85,7 +85,7 @@ searchInDB = (place,time,numOfPeople,more) => {
   return db;
 }
 
-export {searchInDB};
+
 
 let addIdeaToDB;
 addIdeaToDB = (title, content, place,time,minNumOfPeople,maxNumOfPeople) => {
@@ -104,3 +104,5 @@ addIdeaToDB = (title, content, place,time,minNumOfPeople,maxNumOfPeople) => {
   }
   db.push(dbEntry);
 }
+
+export {searchInDB,addIdeaToDB};

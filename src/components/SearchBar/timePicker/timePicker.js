@@ -1,19 +1,19 @@
 import React, { Component } from 'react'
 import './timePicker.css'
 import '../searchBarCommonStyles.css'
+import {NEW_IDEA_SET_TIME} from 'redux/types'
 
 export default class TimePicker extends Component {
-  constructor(){
+  constructor(props){
     super();
+
+    this.handleOnChange = props.onChangeEvent;  
   }
 
-  change(){
-        
-  }
+  
 
   render() {
     return (
-       
       <div class="searchBarChooserContainer" > 
         <div class="searchBarChooserData">
           <img src={require("images/time.png")} class="searchBarIcon verticalMiddleAlign" />
