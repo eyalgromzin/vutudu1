@@ -15,6 +15,18 @@ constructor(props){
 }
 
   handleCreateIdeaClick(event) {
+    this.error = "";
+
+    if(this.props.title == ""){
+      this.isHasError = true;
+      this.error += "missing <Title>,"
+    }
+    if(this.props.content == ""){
+      this.isHasError = true;
+      this.error = "missing <Content>,"
+    }
+    this.error = this.error.substring(0, this.error.length - 1);
+
     var tags = this.extractTagsFromContent()
 
     //addIdeaToDB(title, content, place,time,minNumOfPeople,maxNumOfPeople)
@@ -27,6 +39,8 @@ constructor(props){
   }
 
   extractTagsFromContent(){
+    
+
     var contentText = this.props.content;
     
     var words = contentText.split(" ");
@@ -42,6 +56,8 @@ constructor(props){
     return tags;
   }
 
+  isHasError = false;
+
   handleChange(event) {
     this.setState({value: event.target.value});
   }
@@ -56,6 +72,12 @@ constructor(props){
             <textarea type="text" id="newIdeaContent" placeholder="<content>" onchange={this.handleChange}/>
           </div>
         </div>
+        {this.isHasError ? 
+          <div id="newIdeaError"> </div>
+          : 
+          <React.Fragment />
+        }
+        <div id="newIdeaError"> </div>
         <div class="alignRight">
           <div id="createIdeaButton" onClick={this.handleCreateIdeaClick}> create </div>
         </div>
