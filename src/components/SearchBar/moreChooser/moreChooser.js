@@ -22,7 +22,7 @@ export default class MoreChooser extends Component {
       <div class="searchBarChooserContainer" > 
         <div class="searchBarChooserData">
           <div>
-            <input type="text" placeholder="#MoreInfo" onChange={this.handleChange} />
+            <input type="text" id="moreChooser" placeholder="#MoreInfo" onChange={this.handleChange} />
           </div>
         </div>
       </div>

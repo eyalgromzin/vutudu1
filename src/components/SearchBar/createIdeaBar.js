@@ -18,6 +18,8 @@ class CreateIdeaBar extends Component {
   }
 
   timeOnChangeEvent = (e) => {
+    var x;
+    x++;
     this.props.dispatch({type: NEW_IDEA_SET_TIME, payload: e.target.value});
   }
 

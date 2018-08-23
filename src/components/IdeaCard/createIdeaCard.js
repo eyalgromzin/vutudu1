@@ -5,6 +5,7 @@ import './createIdeaCard.css'
 import { connect } from 'react-redux';
 import { addIdeaToDB } from 'db/dbHandler.js'
 import { NEW_IDEA_SET_TITLE,NEW_IDEA_SET_CONTENT } from 'redux/types'
+import 'commonCss.css'
 
 class CreateIdeaCard extends Component {
 constructor(props){
@@ -15,6 +16,11 @@ constructor(props){
   this.extractTagsFromContent= this.extractTagsFromContent.bind(this);
   this.handleOnTitleChange= this.handleOnTitleChange.bind(this);
   this.handleOnContentChange= this.handleOnContentChange.bind(this);
+
+  this.state={
+    error:"",
+    isHasError: false
+  }
 }
 
   handleCreateIdeaClick(event) {
@@ -22,13 +28,30 @@ constructor(props){
 
     if(this.props.title == ""){
       this.isHasError = true;
-      this.error += "missing <Title>,"
+      this.error += "missing <Title>, "
     }
     if(this.props.content == ""){
       this.isHasError = true;
-      this.error = "missing <Content>,"
+      this.error = "missing <Content>, "
     }
-    this.error = this.error.substring(0, this.error.length - 1);
+    if(this.props.place == ""){
+      this.isHasError = true;
+      this.error += "missing place, "
+    }
+    if(this.props.minTime == ""){
+      this.isHasError = true;
+      this.error += "missing time, "
+    }
+    if(this.props.minNumOfPeople == ""){
+      this.isHasError = true;
+      this.error += "missing min num of people, "
+    }
+    if(this.props.maxNumOfPeople == ""){
+      this.isHasError = true;
+      this.error += "missing max num of people, "
+    }
+
+    this.error = this.error.substring(0, this.error.length - 2);
 
     var tags = this.extractTagsFromContent()
 
@@ -36,7 +59,7 @@ constructor(props){
     addIdeaToDB(this.props.title,
                 this.props.content,
                 this.props.place,
-                this.props.time,
+                this.props.minTime,  //undefined
                 this.props.minNumOfPeople,
                 this.props.maxNumOfPeople);
   }

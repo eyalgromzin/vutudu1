@@ -13,7 +13,7 @@ const initialState = {
     minTime: 0,
     maxTime: 0,
     minNumOfPeople: 1,
-    maxNumOfPeople: 2,
+    maxNumOfPeople: 1,
     place: "",
     tags: [],
 };

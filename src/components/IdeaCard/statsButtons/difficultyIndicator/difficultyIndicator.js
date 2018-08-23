@@ -24,11 +24,11 @@ constructor(props){
     return (
       <div class="bottomIndicator">
         <img src={require("images/difficulty.png")} id="difficultyImage" class="bottomButton"/>
-        <img src={require("images/upArrow.png")} id="increaseDifficulty" class="bottomButton" onClick={this.handleAddDifficultyClick}/>
+        <img src={require("images/upArrow.png")} id="increaseDifficulty" class="bottomButton hoverClickHand" onClick={this.handleAddDifficultyClick}/>
         {this.props.hardCount}
-        <img src={require("images/downArrow.png")} id="decreaseDifficulty" class="bottomButton" onClick={this.handleReduceDifficultyClick}/>        
+        <img src={require("images/downArrow.png")} id="decreaseDifficulty" class="bottomButton hoverClickHand" onClick={this.handleReduceDifficultyClick}/>        
         {this.props.easyCount}
-        <span> ({Math.round((this.props.hardCount/this.props.easyCount) * 100) }%)  </span>
+        <span> ({Math.round((this.props.hardCount/(this.props.easyCount + this.props.hardCount == 0 ? 1 : this.props.easyCount + this.props.hardCount)) * 100) }%)  </span>
       </div>
     )
   }

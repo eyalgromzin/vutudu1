@@ -10,3 +10,7 @@
 .mainContent{
   padding: 0 15%;
 }
+
+.hoverClickHand{
+    cursor: pointer;
+}

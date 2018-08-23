@@ -85,8 +85,6 @@ searchInDB = (place,time,numOfPeople,more) => {
   return db;
 }
 
-
-
 let addIdeaToDB;
 addIdeaToDB = (title, content, place,time,minNumOfPeople,maxNumOfPeople) => {
   var dbEntry ={

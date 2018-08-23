@@ -20,14 +20,18 @@ class LikeDislike extends Component {
     this.props.dispatch({ type: LIKE_IDEA });
   }
 
+  nothing(){
+
+  }
+
   render() {
     return (
       <div class="bottomIndicator">
-        <img src={require("images/like.png")} id="likeButton" class="bottomButton" onClick={this.handleLikeClick}/>
+        <img src={require("images/like.png")} id="likeButton" class="bottomButton hoverClickHand" onClick={this.handleLikeClick}/>
         {this.props.likes}
-        <img src={require("images/dislike.png")} id="dislikeButton" class="bottomButton" onClick={this.handleDislikeClick}/>
+        <img src={require("images/dislike.png")} id="dislikeButton" class="bottomButton hoverClickHand" onClick={this.handleDislikeClick}/>
         {this.props.dislikes}
-        <span> ({Math.round((this.props.likes/(this.props.likes + this.props.dislikes)) * 100) }%)</span>
+        <span> ({Math.round((this.props.likes/((this.props.likes + this.props.dislikes) == 0? 1 : (this.props.likes + this.props.dislikes)) * 100))}%)</span>
       </div>
     )
   }

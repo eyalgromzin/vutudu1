@@ -29,4 +29,5 @@ input:focus {
     padding: 20px;
     background-color: cyan;
     font-family: cursive;
+    cursor: pointer;
 }
