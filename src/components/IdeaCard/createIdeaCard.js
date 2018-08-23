@@ -4,6 +4,7 @@ import IdeaPlace from './cardButtons/placeButton/placeButton'
 import './createIdeaCard.css'
 import { connect } from 'react-redux';
 import { addIdeaToDB } from 'db/dbHandler.js'
+import { NEW_IDEA_SET_TITLE,NEW_IDEA_SET_CONTENT } from 'redux/types'
 
 class CreateIdeaCard extends Component {
 constructor(props){
@@ -12,6 +13,8 @@ constructor(props){
   this.handleChange = this.handleChange.bind(this);
   this.handleCreateIdeaClick = this.handleCreateIdeaClick.bind(this);
   this.extractTagsFromContent= this.extractTagsFromContent.bind(this);
+  this.handleOnTitleChange= this.handleOnTitleChange.bind(this);
+  this.handleOnContentChange= this.handleOnContentChange.bind(this);
 }
 
   handleCreateIdeaClick(event) {
@@ -39,15 +42,11 @@ constructor(props){
   }
 
   extractTagsFromContent(){
-    
-
     var contentText = this.props.content;
-    
     var words = contentText.split(" ");
-    
     var tags = [];
 
-    for (var i = 0; i < words.length - 1; i++) {
+    for (var i = 0; i < words.length; i++) {
       if(words[i].startsWith("#")){
         tags.push(words[i]);
       }
@@ -58,8 +57,16 @@ constructor(props){
 
   isHasError = false;
 
+  handleOnTitleChange(e){
+    this.props.dispatch({type: NEW_IDEA_SET_TITLE, payload: e.target.value});
+  }
+
+  handleOnContentChange(e){
+    this.props.dispatch({type: NEW_IDEA_SET_CONTENT, payload: e.target.value});
+  }
+
   handleChange(event) {
-    this.setState({value: event.target.value});
+    // this.setState({value: event.target.value})
   }
 
   render() {
@@ -68,8 +75,8 @@ constructor(props){
       <div id="createIdeaContainer">
         <div id="ideaCard"> 
           <div id="ideaCardContent">
-            <input type="text" id="newIdeaTitle" placeholder="<title>" onchange={this.handleChange}/>
-            <textarea type="text" id="newIdeaContent" placeholder="<content>" onchange={this.handleChange}/>
+            <input type="text" id="newIdeaTitle" placeholder="<title>" onChange={this.handleOnTitleChange}/>
+            <textarea type="text" id="newIdeaContent" placeholder="<content>" onChange={this.handleOnContentChange}/>
           </div>
         </div>
         {this.isHasError ? 
@@ -88,7 +95,6 @@ constructor(props){
 }
 
 function mapStateToProps(state) {
-  
   return {
     title: state.newIdeaReducer.title,
     content: state.newIdeaReducer.content,
@@ -100,4 +106,4 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect()(CreateIdeaCard);
+export default connect(mapStateToProps)(CreateIdeaCard);

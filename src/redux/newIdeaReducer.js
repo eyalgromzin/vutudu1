@@ -2,9 +2,12 @@ import React from 'react';
 import { combineReducers } from "redux";
 import update from "react-addons-update";
 import { NEW_IDEA_SET_MIN_PEOPLE, NEW_IDEA_SET_MAX_PEOPLE } from 'redux/types'
+import { NEW_IDEA_SET_TIME } from 'redux/types'
+import { NEW_IDEA_SET_TITLE } from 'redux/types'
+import { NEW_IDEA_SET_CONTENT } from 'redux/types'
+import { NEW_IDEA_SET_PLACE } from 'redux/types'
 
 const initialState = {
-  idea:{
     title: 'title',
     content: 'content content',
     minTime: 0,
@@ -13,7 +16,6 @@ const initialState = {
     maxNumOfPeople: 2,
     place: "",
     tags: [],
-  }
 };
 
 function reducer(state = initialState, action) {
@@ -28,6 +30,27 @@ function reducer(state = initialState, action) {
         ...state,
         maxNumOfPeople: action.payload
       };
+    case NEW_IDEA_SET_PLACE:
+      return {
+        ...state,
+        place: action.payload
+      };
+    case NEW_IDEA_SET_TIME:
+    return {
+      ...state,
+      minTime: action.payload,
+      maxTime: action.payload,
+    };
+    case NEW_IDEA_SET_TITLE:
+    return {
+      ...state,
+      title: action.payload,
+    };
+    case NEW_IDEA_SET_CONTENT:
+    return {
+      ...state,
+      content: action.payload,
+    };
     default:
       return state;
   }
