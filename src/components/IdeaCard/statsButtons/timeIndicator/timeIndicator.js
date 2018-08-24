@@ -25,7 +25,7 @@ constructor(props){
       <div class="bottomIndicator">
         <img src={require("images/time.png")} id="timeImage" class="bottomButton" alt="time image"/>
         <img src={require("images/downArrow.png")} id="decreaseTime" class="bottomButton hoverClickHand" onClick={this.handleReduceTimeClick}/>
-        {this.props.minTime}-{this.props.maxTime}
+        <span>{this.props.minTime} - {this.props.maxTime}</span>
         <img src={require("images/upArrow.png")} id="incrementTime" class="bottomButton hoverClickHand" onClick={this.handleAddAddTimeClick}/>
       </div>
     )

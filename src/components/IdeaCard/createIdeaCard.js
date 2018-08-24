@@ -32,7 +32,7 @@ constructor(props){
     }
     if(this.props.content == ""){
       this.isHasError = true;
-      this.error = "missing <Content>, "
+      this.error += "missing <Content>, "
     }
     if(this.props.place == ""){
       this.isHasError = true;
@@ -44,16 +44,19 @@ constructor(props){
     }
     if(this.props.minNumOfPeople == ""){
       this.isHasError = true;
-      this.error += "missing min num of people, "
+      this.error += "missing minimum Number of people, "
     }
     if(this.props.maxNumOfPeople == ""){
       this.isHasError = true;
-      this.error += "missing max num of people, "
+      this.error += "missing maximum number of people, "
     }
 
     this.error = this.error.substring(0, this.error.length - 2);
 
     var tags = this.extractTagsFromContent()
+
+    this.setState({isHasError: true,
+                  error: this.error});
 
     //addIdeaToDB(title, content, place,time,minNumOfPeople,maxNumOfPeople)
     addIdeaToDB(this.props.title,
@@ -102,16 +105,29 @@ constructor(props){
             <textarea type="text" id="newIdeaContent" placeholder="<content>" onChange={this.handleOnContentChange}/>
           </div>
         </div>
-        {this.isHasError ? 
-          <div id="newIdeaError"> </div>
-          : 
-          <React.Fragment />
-        }
-        <div id="newIdeaError"> </div>
+        <div id="newIdeaError"> {this.state.error} </div>
         <div class="alignRight">
           <div id="createIdeaButton" onClick={this.handleCreateIdeaClick}> create </div>
         </div>
       </div>
+
+
+      {/* <div id="createIdeaContainer">
+        <div id="ideaCard">
+          <table id="createIdeaTable">
+            <tr >
+              <input type="text" id="newIdeaTitle" placeholder="<title>" onChange={this.handleOnTitleChange}/>
+              
+            </tr>
+            <tr>
+              <textarea type="text" id="newIdeaContent" placeholder="<content>" onChange={this.handleOnContentChange}/>
+            </tr>
+          </table>
+        </div>
+        <div class="alignRight">
+          <div id="createIdeaButton" onClick={this.handleCreateIdeaClick}> create </div>
+        </div>
+      </div> */}
       </React.Fragment>
     )
   }

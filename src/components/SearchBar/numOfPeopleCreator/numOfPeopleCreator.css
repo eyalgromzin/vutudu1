@@ -3,4 +3,15 @@
 }
 
 #peopleCreatorFrom{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    margin-right: 5px;
+}
+
+#peopleCreatorTo{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    margin-left: 5px;
 }

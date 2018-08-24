@@ -85,7 +85,7 @@ function reducer(state = initialState, action) {
 
     case ADD_TIME:
     var currentIdea = state.ideas[state.currentIdeaIndex];
-    currentIdea.maxTime = currentIdea.maxTime + 1;
+    currentIdea.maxTime = currentIdea.maxTime -1 + 2;
     
     return { 
       ...state,

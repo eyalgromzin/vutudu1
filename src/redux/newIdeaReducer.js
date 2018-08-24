@@ -8,13 +8,13 @@ import { NEW_IDEA_SET_CONTENT } from 'redux/types'
 import { NEW_IDEA_SET_PLACE } from 'redux/types'
 
 const initialState = {
-    title: 'title',
-    content: 'content content',
+    title: '',
+    content: '',
     minTime: 0,
     maxTime: 0,
-    minNumOfPeople: 1,
-    maxNumOfPeople: 1,
-    place: "",
+    minNumOfPeople: '',
+    maxNumOfPeople: '',
+    place: '',
     tags: [],
 };
 

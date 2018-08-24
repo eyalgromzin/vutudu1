@@ -9,4 +9,6 @@
 
 #ideaNextPreviousButtons{
     display: inline-block;
+    margin-right: 10px;
+    width: 120px;
 }

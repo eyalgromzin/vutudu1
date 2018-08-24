@@ -26,12 +26,28 @@ class NumOfPeopleCreator extends Component {
     return (
       <div class="searchBarChooserContainer" > 
         <div class="searchBarChooserData">
-          <img src={require("images/people.png")} class="searchBarIcon verticalMiddleAlign" />
-          <input type="text" id="peopleCreatorFrom" class="verticalMiddleAlign" attributeName="minNumOfPeople"
-              onChange={this.minNumOfPeopleChange} />
-          -
-          <input type="text" id="peopleCreatorTo" class="verticalMiddleAlign" attributeName="maxNumOfPeople"
-               onChange={this.maxNumOfPeopleChange} />
+          <img src={require("images/people.png")} class="searchBarIcon " />
+            <select id="numOfPeopleChooser" class="" onChange={this.minNumOfPeopleChange}>
+              <option value="1" class="timeChooserOption">1</option>
+              <option value="2" class="timeChooserOption" selected="selected">2</option>
+              <option value="3" class="timeChooserOption">3</option>
+              <option value="4" class="timeChooserOption">4</option>
+              <option value="5" class="timeChooserOption">5</option>
+              <option value="6" class="timeChooserOption">6</option>
+              <option value="7" class="timeChooserOption">7</option>
+              <option value="7+" class="timeChooserOption">7+</option>
+            </select>
+            <span> - </span>
+            <select id="numOfPeopleChooser" class="" onChange={this.maxNumOfPeopleChange}>
+              <option value="1" class="timeChooserOption">1</option>
+              <option value="2" class="timeChooserOption">2</option>
+              <option value="3" class="timeChooserOption">3</option>
+              <option value="4" class="timeChooserOption" selected="selected">4</option>
+              <option value="5" class="timeChooserOption">5</option>
+              <option value="6" class="timeChooserOption">6</option>
+              <option value="7" class="timeChooserOption">7</option>
+              <option value="7+" class="timeChooserOption">7+</option>
+            </select>
         </div>
       </div>
     )

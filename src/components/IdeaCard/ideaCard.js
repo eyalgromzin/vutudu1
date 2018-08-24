@@ -22,10 +22,10 @@ class IdeaCard extends Component {
             <div id="topCardButtons">
               <IdeaPreviousNextButtons />
               <div id="cardIndicators"> 
-              <LikeDislike />
-              <TimeIndicator />
-              <DifficultyIndicator />
-            </div>
+                <LikeDislike />
+                <TimeIndicator />
+                <DifficultyIndicator />
+              </div>
             </div>
             <div id="ideaTitle"> 
               {this.props.title}
@@ -33,7 +33,7 @@ class IdeaCard extends Component {
             <div id="ideaContentText"> 
               {this.props.content}
             </div>
-            <div id="`ideaMainContentBottomButtons`"> 
+            <div id="ideaMainContentBottomButtons"> 
               <IdeaAttachmentsButton />
               <IdeaPlaceButton />
             </div>
