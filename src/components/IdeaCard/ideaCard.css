@@ -21,6 +21,8 @@
     font-size: 25px;
     padding-left: 10px;
     padding-right: 10px;
+    height: 350px;
+    overflow-y: auto;
 }
 
 #ideaCard{
@@ -29,9 +31,8 @@
     border-style: solid;
     background-color: azure;
     min-height: 350px;
-    max-height: 500px;
-    position: relative;
-    overflow-y: scroll;
+    max-height: 550px;
+    
 }
 
 #statusButtons{
@@ -39,11 +40,7 @@
 }
 
 #ideaMainContentBottomButtons{
-    position: absolute;
     height:30px;
-    bottom: 5px;
-    right: 5px;
-    /* display: inline-block; */
 }
 
 #ideaContent{
