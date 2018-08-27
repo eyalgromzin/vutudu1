@@ -4,7 +4,7 @@ import 'commonCss.css'
 import { CHANGE_PAGE_TO_CREATE_IDEA } from  'redux/commonReducer'
 import { CHANGE_PAGE_TO_SHOW_IDEAS } from   'redux/commonReducer'
 import { connect } from 'react-redux';
-import Facebook from 'components/facebook'
+
 
 class TopBar extends Component {
   constructor(props){
@@ -45,7 +45,7 @@ class TopBar extends Component {
           <img src={require("images/logo3.png")} class="topBarLogo verticalMiddleAlign" />
           <div id="mainLogo" class=""> VUTUDU </div> 
           {/* <img id="login" src={require("images/user.png")} class="topBarIcon verticalMiddleAlign alignRight" onClick={this.handleLogin} /> */}
-          <Facebook />
+          
           <img id="newIdeaButton" src={require("images/newIdea.png")} class="topBarIcon verticalMiddleAlign alignRight" onClick={this.handleNewIdeaClick} />
           <img id="searchIdeasButton" src={require("images/search.png")} class="topBarIcon verticalMiddleAlign alignRight" onClick={this.handleShowIdeasClick} />
           

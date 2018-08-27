@@ -7,6 +7,7 @@ import { Provider } from 'react-redux';
 import { connect } from 'react-redux';
 import store from './redux/store'
 
+
 export const showIdeaPage = 'SHOW_IDEA';
 export const createIdeaPage = 'CREATE_IDEA';
 
@@ -26,7 +27,7 @@ class App extends Component {
   render() {
     return (
       <Provider store={store}>
-        <Layout />
+         <Layout /> 
       </Provider>
     );
   }

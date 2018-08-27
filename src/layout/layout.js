@@ -14,9 +14,12 @@ import SearchBar from '../components/searchBar/searchBar'
 import IdeaCard from '../components/ideaCard/ideaCard'
 import CreateIdeaBar from '../components/searchBar/createIdeaBar'
 import CreateIdeaCard from '../components/ideaCard/createIdeaCard'
+import LoginScreen from '../components/loginScreen/loginScreen'
 
 export const showIdeaPage = 'SHOW_IDEAS';
 export const createIdeaPage = 'CREATE_IDEA';
+
+
 
 class Layout extends Component {
 
@@ -33,6 +36,7 @@ class Layout extends Component {
   render() {
     return (
       <div>
+        {this.props.loggedIn == false ? <LoginScreen /> : <React.Fragment />}
         <div id="mainPage">
           <TopBar />
           <div class="mainContent">
@@ -56,7 +60,8 @@ class Layout extends Component {
 
 function mapStateToProps(state) {
   return {
-    currentPage: state.commonReducer.currentPage
+    currentPage: state.commonReducer.currentPage,
+    loggedIn: state.commonReducer.loggedIn
   };
 }
 

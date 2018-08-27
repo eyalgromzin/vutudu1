@@ -14,3 +14,12 @@
 .hoverClickHand{
     cursor: pointer;
 }
+
+#mainLogo{
+    display: inline-block;
+    color: white;
+    font-size: 60px;
+    font-family: fantasy;
+    font-weight: bold;
+
+}
