@@ -1,13 +1,21 @@
 import React, { Component } from 'react'
 import GoogleLogin from 'react-google-login';
 import './socialButtons.css'
+import { connect } from 'react-redux';
+import {CHANGE_LOGGED_IN_STATE} from 'redux/commonReducer'
 
 export default class GoogleButton extends Component {
 
-    responseGoogle = (response) => {
+    onsuccessGoogleLogin = (response) => {
         // If responseType is not 'code', callback will return the GoogleAuth object.
         // If responseType is 'code', callback will return the offline token for use on your server.
 
+        console.log(response);
+        this.props.dispatch({ type: CHANGE_LOGGED_IN_STATE, payload: true });
+    }
+
+    onFailGoogleLogin = (response) => {
+        this.props.dispatch({ type: CHANGE_LOGGED_IN_STATE, payload: false });
         console.log(response);
     }
 
@@ -15,11 +23,11 @@ export default class GoogleButton extends Component {
         return (
         <div>
             <GoogleLogin
-                clientId="658977310896-knrl3gka66fldh83dao2rhgbblmd4un9.apps.googleusercontent.com"
+                clientId="961387820511-dv0jhq1vo0nji3meddqop1f58lua25jk.apps.googleusercontent.com"
                 buttonText="Login with Google"
                 className="socialButton"
-                onSuccess={this.responseGoogle}
-                onFailure={this.responseGoogle}
+                onSuccess={this.onsuccessGoogleLogin}
+                onFailure={this.onFailGoogleLogin}
             />
         </div>
         )

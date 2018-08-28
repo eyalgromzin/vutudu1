@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import FacebookLogin from 'react-facebook-login'
+import { connect } from 'react-redux';
+import {CHANGE_LOGGED_IN_STATE} from 'redux/commonReducer'
 
-export default class FacebookButton extends Component {
+class FacebookButton extends Component {
     state={
         isLoggedIn: false,
         userID: '',
@@ -11,6 +13,11 @@ export default class FacebookButton extends Component {
     }
 
     responseFacebook = (response) => {
+        if (response.accessToken) {
+          this.props.dispatch({ type: CHANGE_LOGGED_IN_STATE, payload: true });
+        } else {
+          console.log('User cancelled login or did not fully authorize.');
+        }
         console.log(response);
     }
 
@@ -27,7 +34,9 @@ export default class FacebookButton extends Component {
         autoLoad={true}
         fields="name,email,picture"
         onClick={this.componentClicked}
-        callback={this.responseFacebook} />);
+        callback={this.responseFacebook} 
+        icon="fa-facebook"
+        />);
       }
 
     return (
@@ -37,3 +46,5 @@ export default class FacebookButton extends Component {
     )
   }
 }
+
+export default connect()(FacebookButton);
