@@ -4,7 +4,7 @@ import './socialButtons.css'
 import { connect } from 'react-redux';
 import {CHANGE_LOGGED_IN_STATE} from 'redux/commonReducer'
 
-export default class GoogleButton extends Component {
+class GoogleButton extends Component {
 
     onsuccessGoogleLogin = (response) => {
         // If responseType is not 'code', callback will return the GoogleAuth object.
@@ -33,4 +33,6 @@ export default class GoogleButton extends Component {
         )
     }
 }
+
+export default connect()(GoogleButton);
 

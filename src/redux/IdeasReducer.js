@@ -5,9 +5,9 @@ import update from "react-addons-update";
 const initialState = {
   currentIdeaIndex: 0,
   ideas: ([{
-    id: '111',
-    title: 'aaaa',
-    content: 'content1',
+    id: '222',
+    title: 'idea in 7 words',
+    content: 'idea description, <br /> including hashtags',
     likes: 3,
     dislikes: 4,
     hardCount: 5,
@@ -15,28 +15,7 @@ const initialState = {
     minTime: 7,
     maxTime: 8
   },
-  {
-    id: '222',
-    title: 'bbbbb',
-    content: 'content2',
-    likes: 9,
-    dislikes: 10,
-    hardCount: 11,
-    easyCount: 12,
-    minTime: 13,
-    maxTime: 14
-  },
-  {
-    id: '333',
-    title: 'ccc',
-    content: 'content3',
-    likes:  15,
-    dislikes: 16,
-    hardCount: 17,
-    easyCount: 18,
-    minTime: 19,
-    maxTime: 20
-  }])
+  ])
   
 };
 

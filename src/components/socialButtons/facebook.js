@@ -21,7 +21,8 @@ class FacebookButton extends Component {
         console.log(response);
     }
 
-    componentClicked = () => console.log('clicked');
+    componentClicked = () => 
+    console.log('clicked');
 
   render() {
       let fbContent;

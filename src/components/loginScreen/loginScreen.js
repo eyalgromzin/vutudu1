@@ -23,6 +23,7 @@ export default class LoginScreen extends Component {
             </div>
         </div>
       </div>
+        // <FacebookButton />
     )
   }
 }
