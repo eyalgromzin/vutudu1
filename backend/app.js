@@ -42,14 +42,27 @@ module.exports = app;
 
 var MongoClient = require('mongodb').MongoClient
 
-MongoClient.connect('mongodb://localhost:3001/vutududb', function (err, client) {
+var mongoURL = 'mongodb://localhost:3001/vutududb'
+MongoClient.connect(mongoURL, function (err, client) {
   if (err) throw err
 
-  var db = client.db('vutududb')
   
+  var db = client.db('vutududb')
+  var query = { place: "everywhere" };
+
   app.listen(3001, () => {
-    console.log('listening on 3000')
+    console.log('listening on 3001')
   })
+
+  dbo.collection("ideas").find(query).toArray(function(err, result) {
+    if (err) throw err;
+    
+    console.log(result);
+    
+    db.close();
+  });
+
+
 
   // db.collection('mammals').find().toArray(function (err, result) {
   //   if (err) throw err
