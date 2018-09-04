@@ -47,9 +47,13 @@ MongoClient.connect('mongodb://localhost:3001/vutududb', function (err, client) 
 
   var db = client.db('vutududb')
   
-  db.collection('mammals').find().toArray(function (err, result) {
-    if (err) throw err
-
-    console.log(result)
+  app.listen(3001, () => {
+    console.log('listening on 3000')
   })
+
+  // db.collection('mammals').find().toArray(function (err, result) {
+  //   if (err) throw err
+
+  //   console.log(result)
+  // })
 })
