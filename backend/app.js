@@ -39,3 +39,17 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
+
+var MongoClient = require('mongodb').MongoClient
+
+MongoClient.connect('mongodb://localhost:3001/vutududb', function (err, client) {
+  if (err) throw err
+
+  var db = client.db('vutududb')
+  
+  db.collection('mammals').find().toArray(function (err, result) {
+    if (err) throw err
+
+    console.log(result)
+  })
+})
